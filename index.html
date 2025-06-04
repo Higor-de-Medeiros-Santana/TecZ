@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TechZone</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+      <header>
+        <nav class="menu">
+          <div class="logo">TECHZONE</div>
+          <div class="hamburger" onclick="toggleMenu()">☰</div>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Login/Cadastro</a></li>
+            <li><a href="#">Carrinho</a></li>
+          </ul>
+        </nav>
+      </header> 
+
+
+      <h2>Nossos produtos</h2>
+            <section class="produtos">
+        <div class="produto">
+          <img src="img/pc.png" alt="PC Gamer">
+          <h2>PC Gamer</h2>
+        </div>
+        <div class="produto">
+          <img src="img/Monitor-Gamer-LG-24--Full-HD-144-Hz-Widescreen-24GL600F.png" alt="Monitor LED">
+          <h2>Monitor LED</h2>
+        </div>
+        <div class="produto">
+          <img src="img/note.webp" alt="Notebook">
+          <h2>Notebook</h2>
+        </div>
+      </section>
+    </body>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+      }
+    </script>
+</html>
