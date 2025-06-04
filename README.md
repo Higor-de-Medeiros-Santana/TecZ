@@ -1,2 +1,2 @@
 # TecZ
-Projeto do site TechZone
+Projeto do site Techzone
