@@ -17,25 +17,30 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 10%;
-    box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.585);
 
 }
 .logo {
     height: auto;
-    font-size: 32px;
+    font-size: 27px;
     font-weight: bold;
     color:#ffa600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
-    
+    margin-right: auto;
+    margin-left: 0;
+    float: left;
+}
+body {
+  padding-top: 80px;
 }
 .menu{
     display: flex;
 }
 .menu a{
     color: black;
-    font-size: 16px;
+    font-size: 17px;
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 20px 30px;
     font-weight: 400;
     transition: all 0.42s ease;
 }
@@ -45,6 +50,7 @@ header{
 .icons{
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 .icons i{
  margin-right: 20px;
@@ -63,4 +69,13 @@ header{
     z-index: 1001;
     cursor: pointer;
 }
-  
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  transition: color 0.3s ease; 
+}
+
