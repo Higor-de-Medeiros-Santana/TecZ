@@ -17,10 +17,15 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 10%;
+    box-shadow: 3px 3px 5px 6px #ccc;
+
 }
-.logo img{
-    max-width: 200px;
+.logo {
     height: auto;
+    font-size: 32px;
+    font-weight: bold;
+    color:#ffa600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
     
 }
 .menu{
