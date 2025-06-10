@@ -6,14 +6,13 @@ background: url("http://digital.bnint.com/filelib/s9/photos/white_wood_4500x3000
 
 .carousel {
 position: relative;
-margin-top: 110px;
+margin-top: 95px;
 }
 
 .carousel-inner {
 position: relative;
 overflow: hidden;
 width: 100%;
-height: 400px
 }
 
 .carousel-open:checked + .carousel-item {
@@ -22,10 +21,8 @@ opacity: 100;
 }
 
 .carousel-item {
-position: relative;
+position: absolute;
 opacity: 0;
-height: 100%;
-width: 100%;
 -webkit-transition: opacity 0.6s ease-out;
 transition: opacity 0.6s ease-out;
 }
@@ -80,7 +77,7 @@ list-style: none;
 margin: 0;
 padding: 0;
 position: absolute;
-bottom: 10px;
+bottom: 2%;
 left: 0;
 right: 0;
 text-align: center;
@@ -107,4 +104,17 @@ color: #ff8c00;
 #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
 color: #fb8e01f7;
+}
+
+#title {
+width: 100%;
+position: absolute;
+padding: 0px;
+margin: 0px auto;
+text-align: center;
+font-size: 27px;
+color: rgb(255, 149, 0);
+font-family: 'Open Sans', sans-serif;
+z-index: 9999;
+text-shadow: 0px 1px 2px rgba(255, 148, 7, 0.838), -1px 0px 2px rgba(255, 255, 255, 0);
 }
