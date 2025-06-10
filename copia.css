@@ -34,6 +34,37 @@ body {
     padding-top: 80px;
 }
 
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+
+#barra-pesquisa {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; 
+  outline: none; 
+}
+
+
+button[type="submit"] {
+  padding:6px 14px;
+  font-size: 16px;
+  background-color: #ff9100;
+  color: white;
+  border: 1px solid #ff9100;
+  border-radius: 0 4px 4px 0; 
+  cursor: pointer; 
+}
+
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
 .menu {
     display: flex;
 }
