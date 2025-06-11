@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FF7E00;
+    background: #ff8000;
     padding: 10px 20px;
     box-shadow: inset;
   }
@@ -29,7 +29,7 @@
   .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
   }
   
   .nav-links a {
@@ -80,7 +80,7 @@
     .nav-links {
       display: none;
       flex-direction: column;
-      background-color: #333;
+      background-color: #ff8000;
       position: absolute;
       top: 60px;
       right: 20px;
