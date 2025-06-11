@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TECZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom right, #1200ff, #0000cc);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+
+    .blur-circle {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: 0;
+    }
+
+    .white-blob {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 250px;
+      background: white;
+      border-bottom-right-radius: 100%;
+      z-index: 0;
+    }
+
+    .container {
+      z-index: 1;
+      text-align: center;
+      width: 300px;
+    }
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    h2 {
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .password-container input {
+      padding-right: 40px;
+    }
+
+    .password-container .toggle {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      background: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .links {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-login {
+      margin-top: 20px;
+    }
+
+    .social-login img {
+      width: 32px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="white-blob"></div>
+  <div class="blur-circle"></div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="assets\logo-removebg-preview.png" alt="Logo" />
+    </div>
+    <h2>BEM - VINDO</h2>
+    <form>
+      <input type="email" placeholder="E-mail" required>
+      <div class="password-container">
+        <input type="password" id="senha" placeholder="Senha" required>
+        <span class="toggle" onclick="toggleSenha()">👁️</span>
+      </div>
+      <div class="links">
+        <a href="#">Esqueceu a senha?</a>
+      </div>
+      <button class="login-btn" type="submit">LOGIN</button>
+    </form>
+    <div class="links">
+      <p>Não possui um cadastro? <a href="#">CADASTRAR AGORA</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSenha() {
+      const senha = document.getElementById("senha");
+      senha.type = senha.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>

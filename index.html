@@ -11,9 +11,10 @@
           <div class="logo">TECHZONE</div>
           <div class="hamburger" onclick="toggleMenu()">☰</div>
           <ul class="nav-links" id="navLinks">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Login/Cadastro</a></li>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
             <li><a href="#">Carrinho</a></li>
+            <li><a href="#">Login/Cadastro</a></li>
           </ul>
         </nav>
       </header> 
@@ -34,6 +35,44 @@
           <h2>Notebook</h2>
         </div>
       </section>
+      <div class="carousel">
+        <div class="carousel-inner">
+            
+            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+            <div class="carousel-item">
+                <img src="assets/img/1.png">
+            </div>
+            
+            
+            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="assets/img/2.png">
+            </div>
+            
+            
+            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+            <div class="carousel-item">
+                <img src="assets/img/3.png">
+            </div>
+            
+           
+            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+            <label for="carousel-2" class="carousel-control next control-1">›</label>
+            
+            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+            <label for="carousel-3" class="carousel-control next control-2">›</label>
+            
+            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+            <label for="carousel-1" class="carousel-control next control-3">›</label>
+            
+        
+            <ol class="carousel-indicators">
+                <li><label for="carousel-1" class="carousel-bullet">•</label></li>
+                <li><label for="carousel-2" class="carousel-bullet">•</label></li>
+                <li><label for="carousel-3" class="carousel-bullet">•</label></li>
+            </ol>
+        </div>
+    </div>
     </body>
 
     <script>
