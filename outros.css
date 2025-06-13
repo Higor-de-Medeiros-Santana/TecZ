@@ -1,0 +1,220 @@
+/* Estilos globais básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+/* --- Estilos da Seção "Busque por Categoria" (Padrão para Desktop) --- */
+.category-section {
+    background-color: #f2f2f2;
+    padding: 50px 20px; /* Padding para a seção inteira */
+    text-align: center; /* Centraliza o título */
+}
+
+.category-title {
+    font-size: 1.5em; 
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.category-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background-color: #FFA500; /* Cor laranja */
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.category-carousel-wrapper {
+    display: flex; /* Flex é usado para que as setas possam ser incluídas */
+    align-items: center;
+    justify-content: center; /* Centraliza o grid de categorias no desktop */
+    max-width: 1200px; /* Largura máxima para o grid de 4 itens */
+    margin: 0 auto; /* Centraliza o wrapper na página */
+    padding: 0; /* O grid gerenciará o padding interno */
+}
+
+/* Esconde as setas no desktop por padrão */
+.category-arrow {
+    display: none;
+}
+
+.category-container {
+    /* No desktop, usamos grid para 4 colunas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de largura igual */
+    gap: 30px; /* Espaçamento entre os itens */
+    width: 100%; /* Ocupa a largura total do wrapper */
+    justify-content: center; /* Centraliza itens no grid */
+
+    /* Garante que não haja rolagem horizontal no desktop */
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-container::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease-in-out;
+    flex-shrink: 0; /* Impede encolhimento */
+    width: auto; /* Deixa o grid controlar a largura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-image-circle {
+    width: 120px; /* Diâmetro do círculo */
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid transparent;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-item:hover .category-image-circle {
+    border-color: #FFA500; /* Contorno laranja no hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.category-item.active .category-image-circle {
+    border-color: #FFA500;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.category-image-circle img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.category-name {
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Para telas de tablet (max-width: 1024px) - Ainda com 4 colunas ou ajuste */
+@media (max-width: 1024px) {
+    .category-title {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .category-container {
+        gap: 25px; /* Reduz o espaçamento */
+    }
+    .category-image-circle {
+        width: 110px;
+        height: 110px;
+    }
+    /* Setas e Carrossel ainda escondidos em tablet, mantendo o grid */
+}
+
+/* Para telas de celular (max-width: 768px) - AQUI ATIVA O CARROSSEL MOBILE */
+@media (max-width: 768px) {
+    .category-section {
+        padding: 40px 0; /* Ajusta padding da seção para mobile */
+    }
+    .category-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    /* Carrossel Wrapper: flex para alinhar setas e container */
+    .category-carousel-wrapper {
+        justify-content: space-between; /* Espaço entre setas e o container de itens */
+        padding: 0 10px; /* Padding lateral para o wrapper inteiro */
+    }
+
+    /* Setas visíveis no mobile */
+    .category-arrow {
+        display: flex; /* Torna as setas visíveis */
+        width: 45px; /* Tamanho da seta */
+        height: 45px;
+        font-size: 1.8em;
+        margin: 0 5px; /* Margem entre as setas e o conteúdo */
+    }
+
+    /* Container de categorias: Muda para carrossel horizontal */
+    .category-container {
+        display: flex; /* Muda para flex para rolagem horizontal */
+        grid-template-columns: unset; /* Desativa o grid template do desktop */
+        gap: 20px; /* Espaço entre os itens */
+        overflow-x: auto; /* Habilita rolagem horizontal */
+        justify-content: flex-start; /* Alinha os itens à esquerda no carrossel */
+        padding: 0 5px; /* Padding interno para o container, cria margem do primeiro/último item na rolagem */
+        scroll-snap-type: x mandatory; /* Ajuda a "travar" a rolagem em itens inteiros */
+    }
+
+    /* Item de Categoria: Largura para mostrar 2 por vez no mobile */
+    .category-item {
+        width: calc(50% - 15px); /* 50% da largura do container - metade do gap (20px/2 = 10px, mais um ajuste de 5px) */
+        min-width: calc(50% - 15px); /* Garante que não encolha demais */
+        scroll-snap-align: start; /* Para o scroll-snap */
+    }
+
+    .category-image-circle {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 10px;
+    }
+    .category-name {
+        font-size: 0.9em;
+    }
+}
+
+/* Para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+    .category-section {
+        padding: 30px 0;
+    }
+    .category-title {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .category-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.3em;
+        margin: 0 5px;
+    }
+    .category-item {
+        width: calc(50% - 12.5px); /* Ajuste menor para telas muito pequenas */
+        min-width: calc(50% - 12.5px);
+    }
+    .category-image-circle {
+        width: 80px;
+        height: 80px;
+    }
+    .category-name {
+        font-size: 0.85em;
+    }
+}

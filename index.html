@@ -1,83 +1,284 @@
 <!DOCTYPE html>
-    <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TechZone</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-      <header>
-        <nav class="menu">
-          <div class="logo">TECHZONE</div>
-          <div class="hamburger" onclick="toggleMenu()">☰</div>
-          <ul class="nav-links" id="navLinks">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Produtos</a></li>
-            <li><a href="#">Carrinho</a></li>
-            <li><a href="#">Login/Cadastro</a></li>
-          </ul>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techzone</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css"> 
+    <link rel="stylesheet" href="outros.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">TECHZONE</a>
+        </div>
+
+        <div class="header-center">
+            <form action="/pesquisa" method="get" class="search-wrapper">
+                <label for="barra-pesquisa" class="sr-only">Pesquisar</label>
+                <input type="search" id="barra-pesquisa" name="q" placeholder="O que procura hoje?">
+                <button type="submit" class="search-submit-icon" aria-label="Pesquisar">
+                    <i class='bx bx-search'></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="header-right">
+            <div class="icons">
+                <a href="#">
+                    <i class='bx bx-user'></i><span>Entrar/ Criar conta</span>
+                </a>
+                <a href="#">
+                    <i class='bx bx-cart'></i><span>Carrinho</span>
+                </a>
+                <div id="menu-icon" class="bx bx-menu" aria-label="Abrir menu mobile"></div>
+            </div>
+        </div>
+    </header>
+
+    <div id="offcanvas-menu" class="offcanvas">
+        <div class="offcanvas-header">
+            <div class="logo">TECHZONE</div>
+            <button id="close-menu" class="btn-close" aria-label="Fechar menu">✕</button>
+        </div>
+        <nav class="offcanvas-nav">
+            <ul>
+                <li><a href="#"><i class='bx bx-user'></i><span>Entrar / Criar conta</span></a></li>
+                <li><a href="#"><i class='bx bx-cart'></i><span>Carrinho</span></a></li>
+                <li class="separator"><hr></li>
+                <li><a href="#"><i class='bx bx-grid-alt'></i><span>Produtos</span></a></li>
+                <li><a href="#"><i class='bx bx-tag'></i><span>Ofertas</span></a></li>
+                <li><a href="#"><i class='bx bx-desktop'></i><span>Monitores</span></a></li>
+            </ul>
         </nav>
-      </header> 
-
-
-      <h2>Nossos produtos</h2>
-            <section class="produtos">
-        <div class="produto">
-          <img src="img/pc.png" alt="PC Gamer">
-          <h2>PC Gamer</h2>
-        </div>
-        <div class="produto">
-          <img src="img/Monitor-Gamer-LG-24--Full-HD-144-Hz-Widescreen-24GL600F.png" alt="Monitor LED">
-          <h2>Monitor LED</h2>
-        </div>
-        <div class="produto">
-          <img src="img/note.webp" alt="Notebook">
-          <h2>Notebook</h2>
-        </div>
-      </section>
-      <div class="carousel">
-        <div class="carousel-inner">
-            
-            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-            <div class="carousel-item">
-                <img src="assets/img/1.png">
-            </div>
-            
-            
-            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item">
-                <img src="assets/img/2.png">
-            </div>
-            
-            
-            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-            <div class="carousel-item">
-                <img src="assets/img/3.png">
-            </div>
-            
-           
-            <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-            <label for="carousel-2" class="carousel-control next control-1">›</label>
-            
-            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-            <label for="carousel-3" class="carousel-control next control-2">›</label>
-            
-            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-            <label for="carousel-1" class="carousel-control next control-3">›</label>
-            
-        
-            <ol class="carousel-indicators">
-                <li><label for="carousel-1" class="carousel-bullet">•</label></li>
-                <li><label for="carousel-2" class="carousel-bullet">•</label></li>
-                <li><label for="carousel-3" class="carousel-bullet">•</label></li>
-            </ol>
-        </div>
     </div>
-    </body>
+
+    <section class="slider">
+        <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+        <img src="img/1.png" alt="slide-1.jpg">
+        <img src="img/2.png" alt="slide-2.jpg">
+        <img src="img/3.png" alt="slide-3.jpg">
+        <img src="img/4.png" alt="slide-4.jpg">
+        <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+        <div class="paginacao">
+            <div class="botao"> <i class="far fa-circle"></i> </div>
+            <div class="botao"> <i class="far fa-circle"></i> </div>
+            <div class="botao"> <i class="far fa-circle"></i> </div>
+            <div class="botao"> <i class="far fa-circle"></i> </div>
+        </div>
+    </section>
+
+    <section class="info-bar">
+        <div class="info-item">
+            <i class="fas fa-credit-card"></i>
+            <div>
+                <p>Até 12 vezes</p>
+                <span>sem juros</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-tags"></i>
+            <div>
+                <p>Desc. 12% à vista</p>
+                <span>no Cartão e no PIX</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-barcode"></i>
+            <div>
+                <p>Desconto</p>
+                <span>5% no boleto</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-gamepad"></i>
+            <div>
+                <p>Pronto para</p>
+                <span>sua jogatina</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-tachometer-alt"></i>
+            <div>
+                <p>Performance</p>
+                <span>Premium</span>
+            </div>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-gift"></i>
+            <div>
+                <p>Brindes</p>
+                <span>exclusivos</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <h2 class="category-title">Busque por Categoria</h2>
+
+        <div class="category-carousel-wrapper">
+            <button class="category-arrow category-arrow-left" aria-label="Categoria Anterior">&#10094;</button>
+
+            <div class="category-container">
+                <a href="#" class="category-item">
+                    <div class="category-image-circle">
+                        <img src="img/161729-1200-auto.webp" alt="Imagem de Notebooks">
+                    </div>
+                    <p class="category-name">Notebooks</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <div class="category-image-circle">
+                        <img src="img/monitor_gamer_pcfort_t2701_165_27_led_full_hd_165hz_display_port_hdmi_dvi_vesa_13891_1_41f110c369e18c77abe42f0bfbe24480-Photoroom.png" alt="Imagem de Monitores">
+                    </div>
+                    <p class="category-name">Monitores</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <div class="category-image-circle">
+                        <img src="img/pc-gamer-completo-aquario-curvo-preto_620x620+fill_ffffff-Photoroom.png" alt="Imagem de Computadores">
+                    </div>
+                    <p class="category-name">Computadores</p>
+                </a>
+
+                <a href="#" class="category-item">
+                    <div class="category-image-circle">
+                        <img src="img/headset_gamer_mamba_1.png" alt="Imagem de Periféricos">
+                    </div>
+                    <p class="category-name">Periféricos</p>
+                </a>
+            </div>
+
+            <button class="category-arrow category-arrow-right" aria-label="Próxima Categoria">&#10095;</button>
+        </div>
+    </section>
 
     <script>
-      function toggleMenu() {
-        document.getElementById("navLinks").classList.toggle("active");
-      }
+        // --- Script do menu off-canvas ---
+        const menuIcon = document.getElementById('menu-icon');
+        const offcanvas = document.getElementById('offcanvas-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+
+        function toggleOffcanvasVisibility() {
+            if (window.innerWidth > 992) {
+                offcanvas.classList.remove('show');
+                offcanvas.style.display = 'none';
+            } else {
+                if (!offcanvas.classList.contains('show')) {
+                    offcanvas.style.display = '';
+                }
+            }
+        }
+        window.addEventListener('DOMContentLoaded', toggleOffcanvasVisibility);
+        window.addEventListener('resize', toggleOffcanvasVisibility);
+
+        if (menuIcon) {
+            menuIcon.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    offcanvas.classList.add('show');
+                    offcanvas.style.display = '';
+                }
+            });
+        }
+        if (closeMenuButton) {
+            closeMenuButton.addEventListener('click', () => {
+                offcanvas.classList.remove('show');
+            });
+        }
+
+        // --- Script do carrossel principal (slider) ---
+        const sliderImgs = document.querySelectorAll(".slider img");
+        const sliderDots = document.querySelectorAll(".slider .paginacao .botao i");
+        const sliderLeftArrow = document.querySelector(".slider .arrow-left");
+        const sliderRightArrow = document.querySelector(".slider .arrow-right");
+
+        let currentSlideIndex = 0;
+        let slideTime = 7000;
+        let autoSlideInterval;
+
+        const defClass = (startPos, index) => {
+            for (let i = startPos; i < sliderImgs.length; i++) {
+                sliderImgs[i].style.display = "none";
+                sliderDots[i].classList.remove("fa-circle-dot");
+                sliderDots[i].classList.add("fa-circle");
+            }
+            sliderImgs[index].style.display = "block";
+            sliderDots[index].classList.remove("fa-circle");
+            sliderDots[index].classList.add("fa-circle-dot");
+        };
+
+        const resetAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        };
+
+        defClass(0, 0); // Inicializa o primeiro slide e bolinha
+
+        if (sliderLeftArrow) { // Adicionando verificações de existência
+            sliderLeftArrow.addEventListener("click", function(){
+                currentSlideIndex <= 0 ? currentSlideIndex = sliderImgs.length-1 : currentSlideIndex--;
+                defClass(0, currentSlideIndex);
+                resetAutoSlide();
+            });
+        }
+
+        if (sliderRightArrow) { // Adicionando verificações de existência
+            sliderRightArrow.addEventListener("click", function(){
+                currentSlideIndex >= sliderImgs.length-1 ? currentSlideIndex = 0 : currentSlideIndex++;
+                defClass(0, currentSlideIndex);
+                resetAutoSlide();
+            });
+        }
+
+        sliderDots.forEach((dot, index) => {
+            dot.addEventListener("click", function() {
+                currentSlideIndex = index;
+                defClass(0, currentSlideIndex);
+                resetAutoSlide();
+            });
+        });
+
+        const startAutoSlide = () => {
+            autoSlideInterval = setInterval(() => {
+                currentSlideIndex >= sliderImgs.length-1 ? currentSlideIndex = 0 : currentSlideIndex++;
+                defClass(0, currentSlideIndex);
+            }, slideTime);
+        };
+        startAutoSlide();
+
+        // --- Script do carrossel de categorias ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryContainer = document.querySelector('.category-container');
+            const categoryArrowLeft = document.querySelector('.category-section .category-arrow-left');
+            const categoryArrowRight = document.querySelector('.category-section .category-arrow-right');
+
+            if (categoryContainer && categoryArrowLeft && categoryArrowRight) {
+                categoryArrowRight.addEventListener('click', function() {
+                    categoryContainer.scrollBy({
+                        left: categoryContainer.offsetWidth / 2,
+                        behavior: 'smooth'
+                    });
+                });
+
+                categoryArrowLeft.addEventListener('click', function() {
+                    categoryContainer.scrollBy({
+                        left: -categoryContainer.offsetWidth / 2,
+                        behavior: 'smooth'
+                    });
+                });
+            } else {
+                console.warn('Elementos do carrossel de categorias não encontrados. Verifique as classes e a estrutura HTML.');
+            }
+        });
     </script>
+
+</body>
 </html>
