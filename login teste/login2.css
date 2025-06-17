@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url('../img/Captura\ de\ tela\ 2025-05-31\ 125559-Photoroom.jpg');
+    background: url(/img/—Pngtree—abstract\ gold\ light\ line\ slash_1209439.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -40,35 +40,18 @@ body{
    transition: border-radius .3s;
 }
 .image-layer{
-    position: relative;
+    position: center;
 }
 .form-image-main{
     width: 400px;
     animation: scale-up 3s ease-in-out infinite;
 }
 .form-image{
-    position: absolute;
+    position: center;
     left: 0;
     width: 400px;
 }
-.coin{
-    animation: scale-down 3s ease-in-out infinite;
-}
-.spring{
-    animation: scale-down 3s ease-in-out infinite;
-}
-.dots{
-    animation: scale-up 3s ease-in-out infinite;
-}
-.rocket{
-    animation: up-down 3s ease-in-out infinite;
-}
-.cloud{
-    animation: left-right 3s ease-in-out infinite;
-}
-.stars{
-    animation: scale-down 3s ease-in-out infinite;
-}
+
 
 @keyframes left-right{
   to{
@@ -97,7 +80,7 @@ body{
 }
 .featured-words span{
     font-weight: 600;
-    color: #0044ff;
+    color: #ff9900;
 
 }
 .col-2{

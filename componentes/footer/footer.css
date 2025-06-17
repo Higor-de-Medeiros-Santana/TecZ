@@ -11,7 +11,7 @@ body{
   background: #EEECEB;
 }
 footer{
-  position: fixed;
+  position: relative;
   background: #797979;
   width: 100%;
   bottom: 0;
@@ -24,7 +24,7 @@ footer::before{
   top: 100px;
   height: 1px;
   width: 100%;
-  background: #AFAFB6;
+  background: #ffffff;
 }
 footer .content{
   max-width: 1250px;
@@ -38,8 +38,11 @@ footer .content .top{
   margin-bottom: 50px;
 }
 .content .top .logo-details{
-  color: #fff;
-  font-size: 30px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.45);
+    margin: 0;
 }
 .content .top .media-icons{
   display: flex;
@@ -78,7 +81,7 @@ footer .content .top{
   background: #fff;
 }
 .top .media-icons a:nth-child(4){
-  background: #ff9500;
+  background: #e68f17;
 }
 .top .media-icons a:nth-child(4):hover{
   color: #ff9500;
@@ -138,8 +141,8 @@ footer .content .link-boxes .box{
   height: 40px;
   width: calc(100% + 55px);
   outline: none;
-  border: 2px solid #AFAFB6;
-  background:#ff9500;
+  border: 2px solid #ffffff;
+  background:#ffffff;
   border-radius: 4px;
   padding: 0 15px;
   font-size: 15px;
@@ -147,7 +150,7 @@ footer .content .link-boxes .box{
   margin-top: 5px;
 }
 .link-boxes .input-box input::placeholder{
-  color: #AFAFB6;
+  color: #000000;
   font-size: 16px;
 }
 .link-boxes .input-box input[type="button"]{
