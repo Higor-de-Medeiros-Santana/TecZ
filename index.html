@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techzone</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="carousel.css"> 
+    <link rel="stylesheet" href="componentes/header/header.css">
+    <link rel="stylesheet" href="carousel/carousel.css"> 
     <link rel="stylesheet" href="outros.css">
+    <link rel="stylesheet" href="PAGES/produtos-cards.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +17,7 @@
 </head>
 <body>
 
+   
    </head>
 <body>
 
@@ -34,17 +36,17 @@
             </form>
         </div>
 
-        <div class="header-right">
-            <div class="icons">
-                <a href="#">
-                    <i class='bx bx-user'></i><span>Entrar/ Criar conta</span>
-                </a>
-                <a href="#">
-                    <i class='bx bx-cart'></i><span>Carrinho</span>
-                </a>
-                <div id="menu-icon" class="bx bx-menu" aria-label="Abrir menu mobile"></div>
-            </div>
-        </div>
+       <div class="header-right">
+    <div class="icons">
+        <a href="PAGES/login.html">
+            <i class='bx bx-user'></i><span>Entrar/ Criar conta</span>
+        </a>
+        <a href="PAGES/carrinho.html">
+            <i class='bx bx-cart'></i><span>Carrinho</span>
+        </a>
+        <div id="menu-icon" class="bx bx-menu" aria-label="Abrir menu mobile"></div>
+    </div>
+</div>
     </header>
 
     <div id="offcanvas-menu" class="offcanvas">
@@ -54,8 +56,8 @@
         </div>
         <nav class="offcanvas-nav">
             <ul>
-                <li><a href="#"><i class='bx bx-user'></i><span>Entrar / Criar conta</span></a></li>
-                <li><a href="#"><i class='bx bx-cart'></i><span>Carrinho</span></a></li>
+                <li><a href="login.html"><i class='bx bx-user'></i><span>Entrar / Criar conta</span></a></li>
+                <li><a href="carrinho.html"><i class='bx bx-cart'></i><span>Carrinho</span></a></li>
                 <li class="separator"><hr></li>
                 <li><a href="#"><i class='bx bx-grid-alt'></i><span>Produtos</span></a></li>
                 <li><a href="#"><i class='bx bx-tag'></i><span>Ofertas</span></a></li>
@@ -133,14 +135,14 @@
             <div class="category-container">
                 <a href="#" class="category-item">
                     <div class="category-image-circle">
-                        <img src="img/161729-1200-auto.webp" alt="Imagem de Notebooks">
+                        <img src="img/notebook.webp" alt="Imagem de Notebooks">
                     </div>
                     <p class="category-name">Notebooks</p>
                 </a>
 
                 <a href="#" class="category-item">
                     <div class="category-image-circle">
-                        <img src="img/monitor_gamer_pcfort_t2701_165_27_led_full_hd_165hz_display_port_hdmi_dvi_vesa_13891_1_41f110c369e18c77abe42f0bfbe24480-Photoroom.png" alt="Imagem de Monitores">
+                        <img src="img/monitor-1.png" alt="Imagem de Monitores">
                     </div>
                     <p class="category-name">Monitores</p>
                 </a>
@@ -154,7 +156,7 @@
 
                 <a href="#" class="category-item">
                     <div class="category-image-circle">
-                        <img src="img/headset_gamer_mamba_1.png" alt="Imagem de Periféricos">
+                        <img src="img/headset_gamer.png" alt="Imagem de Periféricos">
                     </div>
                     <p class="category-name">Periféricos</p>
                 </a>
@@ -163,8 +165,429 @@
             <button class="category-arrow category-arrow-right" aria-label="Próxima Categoria">&#10095;</button>
         </div>
     </section>
+    <section class="product-section">
+        <h1 class="section-title">Produtos Mais Vendidos</h1>
+        <div class="carousel-container" id="mais-vendidos-carousel">
+            <button class="carousel-button prev">
+                <i class='bx bx-chevron-left'></i>
+            </button>
 
-    <script src="app.js"></script>
+            <div class="product-carousel-wrapper">
+                <div class="product-carousel-track">
+                    <div class="product-card">
+                        <div class="product-badge">Mais Vendido</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/acer.png" alt="Monitor Gamer HQ 24">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Notebook para jogos</div>
+                            <h2 class="product-title">Notebook Gamer Acer Nitro V15</h2>
+                            <div class="product-description">
+                                <p>O Notebook Gamer Acer Nitro V15 Anv15-51-57ws é perfeito para quem busca alto desempenho em jogos.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">Intel® Core™ i5</span>
+                                <span class="feature">512 GB SSD</span>
+                                <span class="feature">Tela: 15.6” Full HD</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$6.999,00</span>
+                                    <span class="price-now">R$5.199,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">352 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Mais Vendido</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/monitor-car.png" alt="Notebook Gamer Acer Nitro V15">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Monitor Gamer</div>
+                            <h2 class="product-title">Monitor Gamer HQ 24</h2>
+                            <div class="product-description">
+                                <p>O Monitor Gamer HQ 24 é perfeito para quem busca alto desempenho em jogos.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">Resolução: 1920x1080</span>
+                                <span class="feature">Taxa de atualização: 144Hz</span>
+                                <span class="feature">Tempo de resposta: 1ms</span>
+
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$ 1.510,40</span>
+                                    <span class="price-now">R$ 940,60</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Comprar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">361 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Mais Vendido</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/mac.png" alt="Teclado Mecânico Gamer RGB">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">MacBook</div>
+                            <h2 class="product-title">MacBook Air Apple 13</h2>
+                            <div class="product-description">
+                                <p>Desenhado sob medida para o novo chip M2, o MacBook Air une rapidez excepcional e consumo inteligente de energia.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">Apple M2</span>
+                                <span class="feature">512 GB SSD</span>
+                                <span class="feature">Tela: 13.3” Retina</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$10.777,77</span>
+                                    <span class="price-now">R$9.299,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">120 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Mais Vendido</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/pc-1.png" alt="PC Gamer de Alta Performance">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Computador Gamer</div>
+                            <h2 class="product-title">Pc Gamer AMD Ryzen 5 5500 16GB</h2>
+                            <div class="product-description">
+                                <p>O Pc Gamer Neologic Start é #GameReady, já vem montado e pronto pra jogar.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">AMD Ryzen 5 5500</span>
+                                <span class="feature">16GB DDR4</span>
+                                <span class="feature">RTX 3060</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$5.999,00</span>
+                                    <span class="price-now">R$5.079,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">280 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-button next">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </div>
+        <div class="carousel-indicators" id="mais-vendidos-indicators"></div>
+        <div class="view-all-button-container">
+            <a href="PAGES/filtros-produtos.html">
+     <button class="view-all-button">Veja tudo</button>
+         </a>
+        </div>
+    </section>
+
+    <section class="product-section">
+        <h1 class="section-title">Lançamentos</h1>
+        <div class="carousel-container" id="lancamentos-carousel">
+            <button class="carousel-button prev">
+                <i class='bx bx-chevron-left'></i>
+            </button>
+
+            <div class="product-carousel-wrapper">
+                <div class="product-carousel-track">
+                    <div class="product-card">
+                        <div class="product-badge">Lançamento</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/samsung.png" alt="Mouse Gamer Ultra Leve">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Notebook</div>
+                            <h2 class="product-title">Notebook Samsung Galaxy Book 4</h2>
+                            <div class="product-description">
+                                <p>O Galaxy Book 4 é envolto em um corpo de metal inteiriço que pesa apenas 1,55 kg, por isso é elegante, compacto e extremamente portátil.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">Intel® Core™ i5</span>
+                                <span class="feature">512 GB SSD</span>
+                                <span class="feature">Tela: 15.6” Full HD</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$4.299,00</span>
+                                    <span class="price-now">R$3.299,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">115 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Lançamento</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/monitor-2.png" alt="Monitor Gamer PCFort T2701">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Monitor Gamer</div>
+                            <h2 class="product-title">Monitor Gamer PCFort T2701</h2>
+                            <div class="product-description">
+                                <p>O mais novo Monitor Gamer PCFort T2701-165 é a melhor escolha para seus games!</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">165Hz</span>
+                                <span class="feature">VESA 75mm</span>
+                                <span class="feature">FullHD de 1920x1080</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$1.350,00</span>
+                                    <span class="price-now">R$1.026,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Comprar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                            
+                                    <span class="rating-count">50 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge">Lançamento</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/monitor-1.png" alt="Monitor-2">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Monitor Gamer</div>
+                            <h2 class="product-title">Monitor Gamer 32</h2>
+                            <div class="product-description">
+                                <p>Monitor Gamer Curvo de 32" com 1500R, 165Hz e 1ms de resposta, possui painel VA ultrafino e resolução Full HD.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">32 polegadas</span>
+                                <span class="feature">165Hz</span>
+                                <span class="feature">FullHD de 1920x1080</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$2.000,00</span>
+                                    <span class="price-now">R$1.802,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">90 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-card">
+                        <div class="product-badge">Lançamento</div>
+                        <div class="product-tilt-effect">
+                            <div class="product-image">
+                                <img src="img/teclado.png" alt="Teclado Mecânico Gamer RGB">
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Periférico</div>
+                            <h2 class="product-title">Teclado Mecânico Gamer RGB HyperX</h2>
+                            <div class="product-description">
+                                <p>Teclado mecânico com iluminação RGB personalizável, switches de alta durabilidade e tempo de resposta ultra-rápido para gamers.</p>
+                            </div>
+                            <div class="product-features">
+                                <span class="feature">Switches Mecânicos</span>
+                                <span class="feature">Iluminação RGB</span>
+                                <span class="feature">Anti-ghosting</span>
+                            </div>
+                            <div class="product-bottom">
+                                <div class="product-price">
+                                    <span class="price-was">R$ 899,00</span>
+                                    <span class="price-now">R$ 679,00</span>
+                                </div>
+                                <button class="product-button">
+                                    <span class="button-text">Adicionar</span>
+                                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg>
+                                    <span class="loading-spinner"></span>
+                                </button>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-rating">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">
+                                    <img src="img/estrela.png" alt="Estrela de avaliação vazia" width="16" height="16" class="rating-star-img">
+                                    <span class="rating-count">195 Avaliações</span>
+                                </div>
+                                <div class="product-stock">Em estoque</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-button next">
+                <i class='bx bx-chevron-right'></i>
+            </button>
+        </div>
+        <div class="carousel-indicators" id="lancamentos-indicators"></div>
+        <div class="view-all-button-container">
+            <a href="PAGES/filtros-produtos.html">
+        <button class="view-all-button">Veja tudo</button>
+        </a>
+        </div>
+    </section>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/produtos-cards.js"></script>
 
 </body>
 </html>
