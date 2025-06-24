@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary-color: #ff8800;
+    --accent-color: #ff9102;
+    --grey:#484848;
+    --bg-grey: #efefef;
+    --shadow: #949494;
+    --white:rgb(255, 255, 255)f;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+.col-6{
+    width: 50%;
+}
+
+.single-product{
+    width: 1080px;
+    position: relative;
+}
+
+/** Breadcrumb **/
+.single-product .breadcrumb{
+    background: #48484810;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.breadcrumb span{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-left: 8px;
+}
+.breadcrumb span:not(:last-child)::after{
+    content: '/';
+}
+.breadcrumb span a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/** product image **/
+.single-product .product-image{
+    width: 100%;
+}
+.product-image .product-image-main{
+    position: relative;
+    display: block;
+    height: 480px;
+    background: var(--white);
+    padding: 10px;
+}
+.product-image-main img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.product-image-slider{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+.product-image-slider img{
+    width: 90px;
+    height: 90px;
+    background: var(--bg-grey);
+    padding: 6px;
+    cursor: pointer;
+}
+
+/** product title **/
+.product-title{
+    margin-top: 20px;
+}
+.product-title h2{
+    font-size: 32px;
+    line-height: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02rem;
+}
+
+/** product rating **/
+.product-rating{
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.product-rating span:not(:last-child){
+    color: #ffc600;
+}
+.product-rating .review{
+    color: var(--grey);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/** Product price **/
+.product-price{
+    display: flex;
+    position: relative;
+    margin: 10px 0;
+    align-items: center;
+}
+.product-price .offer-price{
+    font-size: 48px;
+    font-weight: 700;
+}
+.product-price .sale-price{
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--grey);
+    margin-left: 12px;
+}
+
+/** Product Details **/
+.product-details{
+    margin: 10px 0;
+}
+.product-details h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.product-details p{
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.2rem;
+}
+
+/** Product size **/
+.product-size{
+    margin: 10px 0;
+}
+.product-size h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+.product-size .size-layout{
+    margin: 5px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.product-size .size-layout .size-input{
+    display: none;
+}
+.product-size .size-layout .size{
+    background: var(--white);
+    padding: 10px 18px;
+    border: 1px solid var(--bg-grey);
+    border-radius: 4px;
+    margin-left: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+.product-size .size-layout .size:hover{
+    border: 1px solid var(--grey);
+}
+.product-size .size-layout input[type="radio"]:checked + .size{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--grey);
+    color: var(--bg-grey);
+    box-shadow: 0 3px 6px var(--shadow);
+}
+
+/** Product Color **/
+.product-color{
+    margin: 10px 0;
+    justify-content: center;
+}
+.product-color h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+.product-color .color-layout{
+    margin: 5px 0;
+    display: flex;
+    gap: 10px;
+}
+.product-color .color-layout label{
+    border-radius: 4px;
+    cursor: pointer;
+    content: '';
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.product-color .color-layout .black{
+    background-color: black;
+}
+.product-color .color-layout .red{
+    background-color: red;
+}
+.product-color .color-layout .blue{
+    background-color: blue;
+}
+.product-color .color-layout input[type="radio"]:checked + label{
+    box-shadow: 0 3px 6px var(--shadow);
+}
+.product-color .color-layout .color-input{
+    display: none;
+}
+
+/** divider **/
+.divider{
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: #48484830;
+    margin: 20px 0;
+}
+
+/** product Button Group **/
+.product-btn-group{
+    display: flex;
+    gap: 15px;
+}
+.product-btn-group .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.product-btn-group .buy-now{
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.product-btn-group .buy-now i{
+    font-size: 20px;
+}
+.product-btn-group .buy-now:hover{
+    box-shadow: 0 3px 6px var(--shadow);
+}
+.product-btn-group .add-cart{
+    background-color: var(--bg-grey);
+    color: var(--grey);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.product-btn-group .add-cart i{
+    font-size: 20px;
+}
+.product-btn-group .add-cart:hover{
+    box-shadow: 0 3px 6px var(--shadow);
+    background: var(--grey);
+    color: #fff;
+}
+.product-btn-group .heart{
+    color: var(--grey);
+    cursor: pointer;
+}
+.product-btn-group .heart i{
+    font-size: 20px;
+}
+.product-btn-group .heart:hover{
+    color: var(--accent-color);
+}
+
+/* Bloco de Especificações Acer */
+.box-acer-specs {
+    margin: 40px auto 32px auto;
+    background: #f8f8f8;
+    border-radius: 12px;
+    max-width: 1080px;
+    box-shadow: 0 2px 8px rgb(255, 255, 255);
+    padding: 24px 32px;
+}
+.box-acer-specs h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #222;
+}
+.box-acer-specs table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    font-size: 16px;
+}
+.box-acer-specs th,
+.box-acer-specs td {
+    text-align: left;
+    padding: 12px 10px;
+    vertical-align: top;
+}
+.box-acer-specs th {
+    font-weight: 600;
+    background: #ececec;
+    width: 220px;
+    border-radius: 6px 0 0 6px;
+}
+.box-acer-specs td {
+    background: #fff;
+}
+.box-acer-specs tr {
+    border-bottom: 1px solid #e4e4e4;
+}
+.box-acer-specs tr:last-child {
+    border-bottom: none;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin: 40px auto 32px auto;
+    background: #f8f8f8;
+    border-radius: 12px;
+    max-width: 1080px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better visibility */
+    padding: 24px 32px;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #222;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.overall-rating .score {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.overall-rating .total-reviews {
+    font-size: 16px;
+    color: var(--grey);
+}
+
+.overall-rating .stars span {
+    color: #ffc600;
+}
+
+.rating-breakdown {
+    flex-grow: 1;
+}
+
+.rating-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.rating-bar span:first-child {
+    width: 80px;
+    flex-shrink: 0;
+    color: var(--grey);
+}
+
+.rating-bar .bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--bg-grey);
+    border-radius: 4px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.rating-bar .bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.rating-bar span:last-child {
+    width: 30px;
+    text-align: right;
+    color: var(--grey);
+}
+
+.reviews-list {
+    margin-top: 30px;
+}
+
+.review-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 15px;
+}
+
+.review-item .reviewer-avatar {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content {
+    flex-grow: 1;
+}
+
+.review-content .reviewer-name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.review-content .review-stars span {
+    color: #ffc600;
+    font-size: 14px;
+}
+
+.review-content .review-stars .score-text {
+    font-size: 14px;
+    color: var(--grey);
+    margin-left: 5px;
+}
+
+.review-content .review-text {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--grey);
+}
+
+.review-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.review-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--bg-grey);
+}
+
+/* Estilo para a miniatura ativa (para o carrossel desktop) */
+.image-list.active-thumbnail {
+    border: 2px solid var(--primary-color);
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+@media screen and (max-width:1080px) {
+    .single-product, .box-acer-specs, .reviews-section {
+        width: 100%;
+        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .box-acer-specs {
+        padding: 14px 2vw;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .container{
+        padding: 20px;
+        height: auto;
+    }
+    .row{
+        display: block;
+    }
+    .col-6{
+        width: 100%;
+        display: block;
+    }
+    .single-product{
+        width: 100%;
+        position: relative;
+    }
+    /* Esconde a imagem principal estática e o slider de miniaturas padrão no mobile */
+    .product-image .product-image-main,
+    .product-image-slider {
+        display: none !important;
+    }
+    .mobile-product-carousel { /* Novo carrossel principal para mobile */
+        display: flex; /* Exibe o carrossel no mobile */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        background: var(--bg-grey);
+        padding: 10px 0;
+        gap: 8px; /* Espaço entre as setas e a imagem */
+    }
+    .carousel-images {
+        width: 220px; /* Largura da área da imagem */
+        height: 220px; /* Altura da área da imagem */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Garante que apenas uma imagem seja visível por vez */
+        position: relative;
+    }
+    .carousel-img {
+        display: none; /* Oculta todas as imagens por padrão */
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 4px;
+        transition: opacity 0.3s; /* Transição suave para a opacidade */
+        position: absolute; /* Posiciona as imagens uma em cima da outra */
+        left: 0; top: 0;
+    }
+    .carousel-img.active { /* A imagem ativa é exibida */
+        display: block;
+        position: relative; /* Restaura o posicionamento para ser visível */
+        opacity: 1;
+        z-index: 1;
+    }
+    .carousel-arrow { /* Estilo das setas de navegação */
+        background: #fff;
+        border: 1px solid var(--grey);
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+        color: var(--primary-color);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2; /* Garante que as setas fiquem acima das imagens */
+        box-shadow: 0 1px 4px #ccc;
+        transition: background 0.2s, color 0.2s;
+    }
+    .carousel-arrow:active {
+        background: var(--primary-color);
+        color: #fff;
+    }
+
+    .breadcrumb{
+        display: none;
+    }
+    .product-title h2{
+        font-size: 24px;
+        line-height: 1.6rem;
+    }
+    .product-size{
+        display: block;
+    }
+    .product-size .size-layout{
+        display: block;
+        margin: 10px 0;
+    }
+    .product-size .size-layout .size{
+        padding: 6px 10px;
+    }
+    .product-btn-group{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .box-acer-specs {
+        max-width: 100%;
+        padding: 12px 2px;
+    }
+    .box-acer-specs table {
+        font-size: 14px;
+    }
+    .box-acer-specs th {
+        width: 110px;
+    }
+
+    /* Responsive adjustments for reviews section (mobile) */
+    .reviews-section {
+        padding: 8px 1vw;
+    }
+    .reviews-section h2 {
+        font-size: 22px;
+    }
+    .overall-rating {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .overall-rating .score {
+        font-size: 32px;
+    }
+    .overall-rating .total-reviews {
+        font-size: 12px;
+    }
+    .rating-bar span:first-child {
+        width: 50px;
+        font-size: 11px;
+    }
+    .rating-bar span:last-child {
+        font-size: 11px;
+    }
+    .review-item {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    .review-item .reviewer-avatar {
+        width: 40px;
+        height: 40px;
+    }
+    .review-content .reviewer-name {
+        font-size: 14px;
+    }
+    .review-content .review-stars span {
+        font-size: 10px;
+    }
+    .review-content .review-stars .score-text {
+        font-size: 10px;
+    }
+    .review-content .review-text {
+        font-size: 13px;
+    }
+    .review-images img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Esconde o carrossel mobile em telas maiores que 520px */
+@media screen and (min-width: 521px) {
+    .mobile-product-carousel {
+        display: none !important;
+    }
+    /* Garante que o product-image-main original e o slider de miniaturas sejam exibidos no desktop */
+    .product-image .product-image-main {
+        display: block !important;
+        position: relative;
+        height: 480px;
+        background: var(--bg-grey);
+        padding: 10px;
+    }
+    .product-image-main img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .product-image-slider {
+        display: flex !important;
+    }
+}

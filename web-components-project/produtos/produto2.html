@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Simples</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/web-components-project/produtos/produtos-rel.css">
+  <link rel="stylesheet" href="/web-components-project/produtos/produtos-rel.js">      
+  <link rel="stylesheet" href="/pages/filtro.css">
+  <link rel="stylesheet" href="/pages/filtro.js">
+  <link rel="stylesheet" href="/web-components-project/produtos/produto.css">
+  <link rel="stylesheet" href="/web-components-project/produtos/produto.js">
+  <link rel="stylesheet" href="/web-components-project/components/card/">
+  <link rel="stylesheet" href="/web-components-project/components/footer/footer.css">
+  <link rel="stylesheet" href="/web-components-project/components/header/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+<body>
+ <header>
+  <div class="header-left">
+    <a href="/web-components-project/index.html" class="logo">TECHZONE</a>
+    </div>
+        <div class="header-center">
+          <form action="/pesquisa" method="get" class="search-wrapper">
+            <label for="barra-pesquisa" class="sr-only">Pesquisar</label>
+            <input type="search" id="barra-pesquisa" name="q" placeholder="O que procura hoje?">
+            <button type="submit" class="search-submit-icon" aria-label="Pesquisar">
+              <i class='bx bx-search'></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="header-right">
+          <div class="icons">
+            <a href="/web-components-project/pages/login.html">
+              <i class='bx bx-user'></i><span>Entrar/ Criar conta</span>
+            </a>
+            <a href="/web-components-project/pages/carrinho.html">
+              <i class='bx bx-cart'></i><span>Carrinho</span>
+            </a>
+            <div id="menu-icon" class="bx bx-menu" aria-label="Abrir menu mobile"></div>
+          </div>
+        </div>
+      </header>
+
+      <div id="offcanvas-menu" class="offcanvas">
+        <div class="offcanvas-header">
+          <div class="logo">TECHZONE</div>
+          <button id="close-menu" class="btn-close" aria-label="Fechar menu">✕</button>
+        </div>
+        <nav class="offcanvas-nav">
+          <ul>
+            <li><a href="/web-components-project/pages/login.html"><i class='bx bx-user'></i><span>Entrar / Criar conta</span></a></li>
+            <li><a href="/web-components-project/pages/carrinho.html"><i class='bx bx-cart'></i><span>Carrinho</span></a></li>
+            <li class="separator"><hr></li>
+            <li><a href="#"><i class='bx bx-grid-alt'></i><span>Produtos</span></a></li>
+            <li><a href="#"><i class='bx bx-tag'></i><span>Ofertas</span></a></li>
+            <li><a href="#"><i class='bx bx-desktop'></i><span>Monitores</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="/web-components-project/img/mac.png" alt="" id="product-main-image">
+                        </div>
+
+                        <div class="product-image-slider" id="thumbnail-slider">
+                            <img src="/web-components-project/img/mac.png" alt=""  class="image-list active-thumbnail" data-index="0">
+                            <img src="/web-components-project/img/mac12-Photoroom.png" alt=""  class="image-list" data-index="1">
+                            <img src="/web-components-project/img/mac3-Photoroom.png" alt=""  class="image-list" data-index="2">
+                            <img src="/web-components-project/img/mac4-Photoroom.png" alt=""  class="image-list" data-index="3">
+                        </div>
+
+                        <div class="mobile-product-carousel">
+                            <button class="carousel-arrow prev">&#8592;</button>
+                            <div class="carousel-images">
+                                <img src="/web-components-project/img/mac.png" alt="" class="carousel-img active" data-index="0">
+                                <img src="/web-components-project/img/mac12-Photoroom.png" alt="" class="carousel-img" data-index="1">
+                                <img src="/web-components-project/img/mac3-Photoroom.png" alt="" class="carousel-img" data-index="2">
+                                <img src="/web-components-project/img/mac3-Photoroom.png" alt="" class="carousel-img" data-index="3">
+                            </div>
+                            <button class="carousel-arrow next">&#8594;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="breadcrumb">
+                        <span><a href="#">Filtro</a></span>
+                        <span><a href="#">Categoria</a></span>
+                        <span class="active">Notebook</span>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Notebook Acer Nitro V15</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(47 Review)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">$99.00</span>
+                            <span class="sale-price">$129.00</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Descrição</h3>
+                            <p>O Nitro V15 apresenta um design mais deiscreto e menos "agressivo" do que os outros notebooks gamers, tornado-se adequado também para o uso em ambientes de trabalho ou estudo.</p>
+                        </div>
+                        <div class="product-size">
+                            <h4>processadores</h4>
+                            <div class="size-layout">
+                                <input type="radio" name="size" value="S" id="1" class="size-input">
+                                <label for="1" class="size">Intel®i3</label>
+
+                                <input type="radio" name="size" value="M" id="2" class="size-input">
+                                <label for="2" class="size">Intel®i5</label>
+
+                                <input type="radio" name="size" value="L" id="3" class="size-input">
+                                <label for="3" class="size">Intel®i7</label>
+                            </div>
+                        </div>
+                        <div class="product-color">
+                            <h4>Color</h4>
+                            <div class="color-layout">
+                                <input type="radio" name="color"  value="black" class="color-input">
+                                <label for="black" class="black"></label>
+                            </div>
+                        </div>
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-truck' ></i>Frete Grátis</div>
+                            <div class="button heart"><i class='bx bxs-receipt' ></i>1 ano de Garantia</div>
+                            <div class="button add-cart"><i class='bx bxs-cart' ></i>Adicionar ao Carrinho</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box-acer-specs">
+        <h2>Especificações</h2>
+        <table>
+            <tr>
+                <th>Sistema Operacional</th>
+                <td>Windows 11 Home.</td>
+            </tr>
+            <tr>
+                <th>CPU e Chipset</th>
+                <td>
+                   O Acer Nitro V 15 vem equipado com processadores Intel Core de 13ª Geração (comuns são i5-13420H ou i7-13620H) ou, em algumas variantes, AMD Ryzen série 7000. O chipset é integrado diretamente à plataforma do processador Intel, otimizando a comunicação e garantindo compatibilidade com tecnologias modernas como memória DDR5 e PCIe Gen4/Gen5.
+                </td>
+            </tr>
+            <tr>
+                <th>Memória RAM</th>
+                <td>
+                    8 GB RAM DDR5 de até 5200 MHz (1x módulo SO-DIMM de 8 GB)<br>
+                    Expansível até 32 GB DDR5 de até 5200 MHz (com 2 slots para memórias em módulo SO-DIMM com capacidade para até 16 GB cada)
+                </td>
+            </tr>
+            <tr>
+                <th>Tela</th>
+                <td>
+
+15.6” Painel de LED IPS (in-Plane-Switching)Resolução: Full HD 1920 x 1080Proporção: 16:9Taxa de atualização: 165 HzBrilho: 300 nitsTempo de resposta: 27 a aproximadamente~ 25 ms  Contraste: 1000:1Espaço de cor (color gamut): 45% NTSCTecnologia antirreflexo Acer ComfyView™
+                </td>
+            </tr>
+            <tr>
+                <th>Bateria e Alimentação</th>
+                <td>
+                    Fonte de alimentação:Externa de 135 Watts bivolt 100 a 240 Volts com cabo de 3 pinos padrão do Brasil e certificação do INMETROBateria:De até 3720 mAh com 4 células de Íon de lítio de 57 Watts / horaAutonomia da bateria de até 7 horas (dependendo das condições de uso)
+                </td>
+            </tr>
+            <tr>
+                <th>Áudio</th>
+                <td>
+                    Em termos de qualidade geral, os alto-falantes do Nitro V 15 oferecem um som claro e relativamente alto para um notebook. Para a maioria dos usuários casuais, a experiência é satisfatória para assistir a vídeos, ouvir música e jogar.
+                </td>
+            </tr>
+            <tr>
+                <th>Capacidade</th>
+                <td>512 GB SSD NVMe PCIe 4.0 x4 M.2 2280</td>
+            </tr>
+        </table>
+    </div>
+    <div class="reviews-section">
+        <h2>Principais avaliações do Brasil</h2>
+        <div class="overall-rating">
+            <div class="score">4.8</div>
+            <div>
+                <div class="stars">
+                    <span><i class='bx bxs-star'></i></span>
+                    <span><i class='bx bxs-star'></i></span>
+                    <span><i class='bx bxs-star'></i></span>
+                    <span><i class='bx bxs-star'></i></span>
+                    <span><i class='bx bxs-star-half'></i></span>
+                </div>
+                <div class="total-reviews">144 avaliações globais</div>
+            </div>
+            <div class="rating-breakdown">
+                <div class="rating-bar">
+                    <span>Excelente</span>
+                    <div class="bar-container"><div class="bar" style="width: 100%;"></div></div>
+                    <span>100</span>
+                </div>
+                <div class="rating-bar">
+                    <span>Bom</span>
+                    <div class="bar-container"><div class="bar" style="width: 11%;"></div></div>
+                    <span>11</span>
+                </div>
+                <div class="rating-bar">
+                    <span>Média</span>
+                    <div class="bar-container"><div class="bar" style="width: 3%;"></div></div>
+                    <span>3</span>
+                </div>
+                <div class="rating-bar">
+                    <span>Abaixo da Média</span>
+                    <div class="bar-container"><div class="bar" style="width: 8%;"></div></div>
+                    <span>8</span>
+                </div>
+                <div class="rating-bar">
+                    <span>Ruim</span>
+                    <div class="bar-container"><div class="bar" style="width: 1%;"></div></div>
+                    <span>1</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-list">
+            <div class="review-item">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29329?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Maria Carmo" class="reviewer-avatar">
+                <div class="review-content">
+                    <div class="reviewer-name">Maria Carmo</div>
+                    <div class="review-stars">
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star-half'></i></span>
+                        <span class="score-text">4.5/5</span>
+                    </div>
+                    <p class="review-text">"O monitor é muito bom, mas achei o suporte um pouco frágil. Se possível, recomendo usar um suporte VESA para mais estabilidade."</p>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a86b5b5c6f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rodrigo Freitas" class="reviewer-avatar">
+                <div class="review-content">
+                    <div class="reviewer-name">Rodrigo Freitas</div>
+                    <div class="review-stars">
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star-half'></i></span>
+                        <span class="score-text">4.5/5</span>
+                    </div>
+                    <p class="review-text">"Monitor excelente pelo preço! Resolução incrível e tempo de resposta muito rápido. Recomendo para quem quer um bom desempenho sem gastar muito."</p>
+                </div>
+            </div>
+
+            <div class="review-item">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jurema Silva" class="reviewer-avatar">
+                <div class="review-content">
+                    <div class="reviewer-name">Jurema Silva</div>
+                    <div class="review-stars">
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star'></i></span>
+                        <span><i class='bx bxs-star-half'></i></span>
+                        <span class="score-text">4.5/5</span>
+                    </div>
+                    <p class="review-text">"A qualidade de imagem desse monitor é incrível! As cores são vivas, e a taxa de atualização alta faz toda a diferença nos jogos."</p>
+                    <div class="review-images">
+                        <img src="https://images.unsplash.com/photo-1593642532781-03e79cefd2c5?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Review Image 1">
+                        <img src="https://images.unsplash.com/photo-1579783900882-c0d3ce7b2b73?q=80&w=2003&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Review Image 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="related-products-carousel">
+  <h2 class="related-carousel-title">Produtos relacionados</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-nav prev" aria-label="Produto anterior">&#10094;</button>
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <!-- CARD 1 -->
+        <div class="related-card active">
+          <div class="badge-discount" style="background:#43af0c;">30% OFF</div>
+          <button class="favorite-btn" aria-label="Adicionar aos favoritos"><i class="fa-regular fa-heart"></i></button>
+          <img class="related-img" src="https://i.imgur.com/8xUv9bT.png" alt="Notebook Predator Helios Neo" />
+          <div class="related-card-content">
+            <h3 class="related-card-title">Notebook Predator Helios Neo</h3>
+            <div class="related-card-model">
+              <b>Modelo:</b> PHN16-71-72W6
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                68
+              </span>
+            </div>
+            <ul class="related-specs">
+              <li><b>Sistema Operacional:</b> Windows 11 Home</li>
+              <li><b>Processador:</b> Intel® Core™ i7-13650HX de 13ª geração</li>
+              <li><b>Armazenamento:</b> 512 GB SSD</li>
+              <li><b>Memória:</b> 16 GB RAM DDR5</li>
+              <li><b>Gráfico:</b> Nvidia® GeForce® RTX 4060 GDDR6</li>
+              <li><b>Tela:</b> 16” WUXGA (1920 x 1200) 165 Hz</li>
+            </ul>
+            <div class="related-prices">
+              <div class="old-price">R$ 12.999,00</div>
+              <div class="installments">Ou 12x de R$ 757,48 sem juros</div>
+              <div class="main-price">R$ 9.089,77</div>
+              <div class="pix-price">R$ 7.999,00 <span>com 12% de desconto no PIX</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 2 -->
+        <div class="related-card">
+          <div class="badge-discount" style="background:#43af0c;">16% OFF</div>
+          <button class="favorite-btn" aria-label="Adicionar aos favoritos"><i class="fa-regular fa-heart"></i></button>
+          <img class="related-img" src="https://i.imgur.com/fKGy1k9.png" alt="Notebook Gamer Acer Nitro V15" />
+          <div class="badge-launch">Lançamento</div>
+          <div class="related-card-content">
+            <h3 class="related-card-title">Notebook Gamer Acer Nitro V15</h3>
+            <div class="related-card-model">
+              <b>Modelo:</b> ANV15-51-51UZ
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                5
+              </span>
+            </div>
+            <ul class="related-specs">
+              <li><b>Sistema Operacional:</b> Linux Guta</li>
+              <li><b>Processador:</b> Intel® Core™ i5-13420H de 13ª geração</li>
+              <li><b>Armazenamento:</b> 512 GB SSD</li>
+              <li><b>Memória:</b> 16 GB RAM DDR5</li>
+              <li><b>Gráfico:</b> Nvidia® GeForce® RTX 4050 GDDR6</li>
+              <li><b>Tela:</b> 15.6” Full HD (1920 x 1080) 144Hz</li>
+            </ul>
+            <div class="related-prices">
+              <div class="old-price">R$ 6.999,00</div>
+              <div class="installments">Ou 12x de R$ 492,32 sem juros</div>
+              <div class="main-price">R$ 5.907,95</div>
+              <div class="pix-price">R$ 5.199,00 <span>com 12% de desconto no PIX</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="related-card">
+          <div class="badge-discount" style="background:#43af0c;">35% OFF</div>
+          <button class="favorite-btn" aria-label="Adicionar aos favoritos"><i class="fa-regular fa-heart"></i></button>
+          <img class="related-img" src="https://i.imgur.com/fKGy1k9.png" alt="Notebook Gamer Acer Nitro V" />
+          <div class="related-card-content">
+            <h3 class="related-card-title">Notebook Gamer Acer Nitro V</h3>
+            <div class="related-card-model">
+              <b>Modelo:</b> ANV15-51-57WS
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                56
+              </span>
+            </div>
+            <ul class="related-specs">
+              <li><b>Sistema Operacional:</b> Linux Guta</li>
+              <li><b>Processador:</b> Intel® Core™ i5-13420H de 13ª geração</li>
+              <li><b>Armazenamento:</b> 512 GB SSD</li>
+              <li><b>Memória:</b> 8 GB RAM DDR5</li>
+              <li><b>Gráfico:</b> Nvidia® GeForce® RTX 3050 GDDR6</li>
+              <li><b>Tela:</b> 15.6” Full HD (1920 x 1080) 144Hz</li>
+            </ul>
+            <div class="related-prices">
+              <div class="old-price">R$ 7.999,00</div>
+              <div class="installments">Ou 12x de R$ 435,51 sem juros</div>
+              <div class="main-price">R$ 5.226,14</div>
+              <div class="pix-price">R$ 4.599,00 <span>com 12% de desconto no PIX</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 4 -->
+        <div class="related-card">
+          <div class="badge-discount" style="background:#43af0c;">19% OFF</div>
+          <button class="favorite-btn" aria-label="Adicionar aos favoritos"><i class="fa-regular fa-heart"></i></button>
+          <img class="related-img" src="/web-components-project/img/mac.png" alt="Notebook Gamer Acer Nitro V15" />
+          <div class="related-card-content">
+            <h3 class="related-card-title">Notebook Gamer Acer Nitro V15</h3>
+            <div class="related-card-model">
+              <b>Modelo:</b> ANV15-51-7837
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                3
+              </span>
+            </div>
+            <ul class="related-specs">
+              <li><b>Sistema Operacional:</b> Linux Guta</li>
+              <li><b>Processador:</b> Intel® Core™ i7-13620H de 13ª geração</li>
+              <li><b>Armazenamento:</b> 512 GB SSD</li>
+              <li><b>Memória:</b> 8 GB RAM DDR5</li>
+              <li><b>Gráfico:</b> Nvidia® GeForce® RTX 3050 GDDR6</li>
+              <li><b>Tela:</b> 15.6” Full HD (1920 x 1080) 144Hz</li>
+            </ul>
+            <div class="related-prices">
+              <div class="old-price">R$ 6.999,00</div>
+              <div class="installments">Ou 12x de R$ 473,39 sem juros</div>
+              <div class="main-price">R$ 5.680,68</div>
+              <div class="pix-price">R$ 4.999,00 <span>com 12% de desconto no PIX</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-nav next" aria-label="Próximo produto">&#10095;</button>
+  </div>
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+    <footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fas fa-gamepad"></i>
+          <span class="logo_name">TECHZONE</span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+          <a href="#"><i class="fab fa-twitch"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Loja</li>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Novidades</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Categorias</li>
+          <li><a href="#">Periféricos</a></li>
+          <li><a href="#">PC Gamer</a></li>
+          <li><a href="#">Consoles</a></li>
+          <li><a href="#">Acessórios</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Minha Conta</li>
+          <li><a href="#">Perfil</a></li>
+          <li><a href="#">Meus pedidos</a></li>
+          <li><a href="#">Favoritos</a></li>
+          <li><a href="#">Carrinho</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Suporte</li>
+          <li><a href="#">Ajuda</a></li>
+          <li><a href="#">Trocas & Devoluções</a></li>
+          <li><a href="#">Garantia</a></li>
+          <li><a href="#">Fale conosco</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Receba novidades</li>
+          <li><input type="text" placeholder="Digite seu e-mail"></li>
+          <li><input type="button" value="Inscrever"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">
+          Copyright © 2025 <a href="#">THECHZONE</a>. Todos os direitos reservados.
+        </span>
+        <span class="policy_terms">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos & Condições</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+    <script src="/web-components-project/pages/filtro.js"></script>
+    <script src="/web-components-project/pages/carrinho.js"></script>
+    <script src="/web-components-project/produtos/produto.js"></script>
+    <script src="/web-components-project/produtos/produtos-rel.js"></script>
+    <script src="/web-components-project/scripts/main.js"></script>
+
+
+</body>
+</html>

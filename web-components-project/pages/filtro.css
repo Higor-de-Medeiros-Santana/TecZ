@@ -1,0 +1,320 @@
+/* Variáveis CSS para cores e fontes */
+:root {
+    --primary-color: #ff9500; /* Azul vibrante, ajuste conforme sua marca */
+    --secondary-color: #000000;
+    --text-color: #000000;
+    --light-gray: #f8f9fa;
+    --border-color: #dee2e6;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.437);
+}
+
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: var(--light-gray);
+}
+
+.search-bar i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+/* Contêiner principal */
+.main-container {
+    display: flex;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+}
+
+/* Sidebar de Filtros */
+.sidebar {
+    flex: 0 0 250px; /* Largura fixa para a sidebar */
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    align-self: flex-start; /* Alinha o sidebar ao topo */
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.filter-title h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.filter-title i {
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+
+/* Rotação do ícone para filtros abertos/fechados (via JS) */
+.filter-title.active i {
+    transform: rotate(180deg);
+}
+
+.filter-options {
+    list-style: none;
+    padding-left: 0;
+    max-height: 0; /* Para esconder as opções por padrão */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.filter-options.expanded {
+    max-height: 500px; /* Altura suficiente para mostrar todas as opções, ajuste conforme necessário */
+}
+
+.filter-options li {
+    margin-bottom: 0.6rem;
+}
+
+.filter-options li a {
+    display: block;
+    padding: 0.4rem 0;
+    color: var(--text-color);
+    transition: color 0.2s ease;
+}
+
+.filter-options li a:hover {
+    color: var(--primary-color);
+}
+
+.filter-options .sub-filter {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    cursor: pointer; /* Para tornar clicável também */
+}
+
+.filter-options .sub-filter span {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.filter-options .nested {
+    padding-left: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.filter-options .nested.expanded {
+    max-height: 300px; /* Ajuste conforme necessário */
+}
+
+/* Grid de Produtos */
+.product-grid {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    /* Garante tamanho igual para todos os cards */
+    height: 100%;
+    min-height: 400px;
+    max-height: 480px;
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-rating {
+    color: #ffc107; /* Cor das estrelas */
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 28px;
+}
+
+.product-rating i {
+    margin-right: 2px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 150px; /* Altura fixa para as imagens */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    min-height: 48px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    flex-grow: 1; /* Para que o parágrafo ocupe o espaço disponível */
+    margin-bottom: 1rem;
+    min-height: 48px;
+}
+
+.buy-button {
+    background-color: #ff9900; /* Cor amarela do botão, ajuste conforme a imagem */
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    align-self: stretch;
+}
+
+.buy-button:hover {
+    background-color: #cc8a17; /* Um tom mais escuro para o hover */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: 1rem; /* Você pode ajustar este valor (ex: 0.5rem, 1.5rem, 2rem) */
+    }
+
+    .sidebar {
+        flex: 0 0 auto; /* Permite que a sidebar ocupe a largura total */
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1rem;
+    }
+
+    .search-bar {
+        padding: 0.4rem;
+    }
+
+    .search-bar input {
+        font-size: 0.9rem;
+    }
+
+    .main-container {
+        padding: 0.9rem;
+        margin-top: 1.5rem; /* Um pouco mais de espaço para telas menores */
+    }
+
+    .sidebar {
+        padding: 1rem;
+    }
+
+    .filter-title h4 {
+        font-size: 1rem;
+    }
+
+    .filter-options li a {
+        font-size: 0.9rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .product-card p {
+        font-size: 0.85rem;
+    }
+
+    .buy-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-bar {
+        font-size: 0.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+
+    .sidebar {
+        padding: 0.8rem;
+    }
+}

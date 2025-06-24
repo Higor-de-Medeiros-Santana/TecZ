@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho de Compras Estilo Kabum</title>
+  <link rel="stylesheet" href="/web-components-project/pages/carrinho.css">
+  <link rel="stylesheet" href="/web-components-project/components/header/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> </head>
+<body>
+  <header>
+  <div class="header-left">
+    <a href="/web-components-project/index.html" class="logo">TECHZONE</a>
+    </div>
+
+        <div class="header-center">
+          <form action="/pesquisa" method="get" class="search-wrapper">
+            <label for="barra-pesquisa" class="sr-only">Pesquisar</label>
+            <input type="search" id="barra-pesquisa" name="q" placeholder="O que procura hoje?">
+            <button type="submit" class="search-submit-icon" aria-label="Pesquisar">
+              <i class='bx bx-search'></i>
+            </button>
+          </form>
+        </div>
+         <div id="offcanvas-menu" class="offcanvas">
+        <div class="offcanvas-header">
+          <div class="logo">TECHZONE</div>
+          <button id="close-menu" class="btn-close" aria-label="Fechar menu">✕</button>
+        </div>
+        <nav class="offcanvas-nav">
+          <ul>
+            <li><a href="/web-components-project/pages/login.html"><i class='bx bx-user'></i><span>Entrar / Criar conta</span></a></li>
+            <li><a href="/web-components-project/pages/carrinho.html"><i class='bx bx-cart'></i><span>Carrinho</span></a></li>
+            <li class="separator"><hr></li>
+            <li><a href="#"><i class='bx bx-grid-alt'></i><span>Produtos</span></a></li>
+            <li><a href="#"><i class='bx bx-tag'></i><span>Ofertas</span></a></li>
+            <li><a href="#"><i class='bx bx-desktop'></i><span>Monitores</span></a></li>
+          </ul>
+        </nav>
+      </div>
+        <div class="header-right">
+          <div class="icons">
+            <a href="/login teste/login2.html">
+              <i class='bx bx-user'></i><span>Entrar/ Criar conta</span>
+            </a>
+            <a href="/web-components-project/pages/login.html">
+              <i class='bx bx-cart'></i><span>Carrinho</span>
+            </a>
+            <div id="menu-icon" class="bx bx-menu" aria-label="Abrir menu mobile"></div>
+          </div>
+        </div>
+      </header>
+  <div class="container">
+    <main class="cart-main">
+      <section class="cart-products" id="cart-products">
+        </section>
+      <div class="cart-coupon">
+        <input type="text" id="coupon" placeholder="Cupom de desconto">
+        <button onclick="applyCoupon()">APLICAR CUPOM</button>
+      </div>
+    </main>
+    <aside class="cart-summary">
+      <div class="summary-card" id="summary-card">
+        </div>
+      <div class="cart-shipping">
+        <label for="cep">CEP*</label>
+        <div class="cep-input-group"> <input type="text" id="cep" placeholder="12345-678">
+          <button onclick="alert('Simulação de busca de CEP!')">OK</button>
+        </div>
+        <span class="small-link">Não lembro meu CEP</span>
+      </div>
+      <button class="btn-orange" onclick="alert('Ir para o pagamento!')">IR PARA O PAGAMENTO</button>
+      <button class="btn-outline" onclick="alert('Continuar comprando!')">CONTINUAR COMPRANDO</button>
+    </aside>
+  </div>
+  <script src="/web-components-project/pages/carrinho.js"></script>
+  <script src="/web-components-project/scripts/main.js"></script>
+</body>
+</html>
