@@ -90,7 +90,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto9.html">
                 <div class="product-card">
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
@@ -134,7 +134,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+              <a href="/web-components-project/produtos/produto2.html">
                 <div class="product-card">
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
