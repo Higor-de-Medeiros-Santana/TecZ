@@ -178,7 +178,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto7.html">
                 <div class="product-card">
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
@@ -188,12 +188,12 @@ class CardComponent extends HTMLElement {
                   </div>
                   <div class="product-info">
                     <div class="product-category">Computador Gamer</div>
-                    <h2 class="product-title">Pc Gamer AMD Ryzen 5 5500 16GB</h2>
+                    <h2 class="product-title">PC Gamer Nível 100X Ryzen 9 9950X</h2>
                     <div class="product-description">
                       <p>O Pc Gamer Neologic Start é #GameReady, já vem montado e pronto pra jogar.</p>
                     </div>
                     <div class="product-features">
-                      <span class="feature">AMD Ryzen 5 5500</span>
+                      <span class="feature">AMD Ryzen 9 9950X</span>
                       <span class="feature">16GB DDR4</span>
                       <span class="feature">RTX 3060</span>
                     </div>
@@ -243,7 +243,7 @@ class CardComponent extends HTMLElement {
           </button>
           <div class="product-carousel-wrapper">
             <div class="product-carousel-track">
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto4.html">
                 <div class="product-card">
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
@@ -287,7 +287,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto6.html">
                 <div class="product-card">
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
@@ -331,7 +331,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto5.html">
                 <div class="product-card">
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
@@ -375,7 +375,7 @@ class CardComponent extends HTMLElement {
                   </div>
                 </div>
               </a>
-               <a href="/web-components-project/produtos/produto1.html">
+               <a href="/web-components-project/produtos/produto3.html">
                 <div class="product-card">
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">

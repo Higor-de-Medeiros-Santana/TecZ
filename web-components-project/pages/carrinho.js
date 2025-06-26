@@ -2,15 +2,15 @@
 let cart = [
   {
     id: 1,
-    title: "Iphone 15 Apple, 128GB, Quadriband, 6,1 Polegadas, Preto – Mtp03br/a",
-    desc: "Apple",
-    image: "/web-components-project/img/PCM-Pichau-Gamer1 copy.png",
-    pricePix: 4319.10,
-    price: 4746.26,
+    title: "PC Gamer Aquario Branco Ryzen 5 5500",
+    desc: "Computadores",
+    image: "/web-components-project/img/pc6-Photoroom.png",
+    pricePix: 5940.80, 
+    price: 6840.80,    
     qty: 1
   }
 ];
-let couponDiscount = 0; // 0 = sem cupom, 0.1 = 10%
+let couponDiscount = 0; 
 let couponUsed = "";
 
 function renderCart() {
@@ -118,5 +118,5 @@ function applyCoupon() {
   renderSummary();
 }
 
-// Inicializa o carrinho ao carregar
+
 window.onload = renderCart;

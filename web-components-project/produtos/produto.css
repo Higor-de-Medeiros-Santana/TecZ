@@ -210,21 +210,7 @@
     height: 40px;
     display: inline-block;
 }
-.product-color .color-layout .black{
-    background-color: black;
-}
-.product-color .color-layout .red{
-    background-color: red;
-}
-.product-color .color-layout .blue{
-    background-color: blue;
-}
-.product-color .color-layout input[type="radio"]:checked + label{
-    box-shadow: 0 3px 6px var(--shadow);
-}
-.product-color .color-layout .color-input{
-    display: none;
-}
+
 
 /** divider **/
 .divider{
