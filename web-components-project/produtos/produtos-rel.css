@@ -214,8 +214,6 @@
 .carousel-dots .dot.active {
   background: #ffae00;
 }
-
-/* MOBILE CAROUSEL */
 @media (max-width: 900px) {
   .carousel-track {
     gap: 0;
@@ -251,7 +249,6 @@
   }
 }
 
-/* DESKTOP: grid style, carousel controls hidden */
 @media (min-width: 901px) {
   .carousel-track-wrapper {
     overflow: visible;
