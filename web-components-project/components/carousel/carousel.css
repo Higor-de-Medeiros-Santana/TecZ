@@ -145,7 +145,7 @@
 
 @media (max-width: 600px) {
   .slider {
-    margin-top: 110px; /* ou outro valor */
+    margin-top: 110px; 
   }
   .slider .seta {
     font-size: 1.3em;
@@ -166,7 +166,7 @@
     width: 100vw;
     min-width: 100vw;
     box-sizing: border-box;
-    margin-left: calc(50% - 50vw); /* Garante que o fundo branco vá de ponta a ponta */
+    margin-left: calc(50% - 50vw); 
     padding-left: 0;
     padding-right: 0;
     display: flex;
@@ -186,9 +186,9 @@
     font-size: 0.55rem;
     padding: 8px 0;
   }
-  /* Remove margem à esquerda só do primeiro item */
+  
   .info-item:first-child {
-    margin-left: 0; /* Garante que o primeiro não tenha margem extra */
+    margin-left: 0; 
   }
   .info-bar .info-item:first-child {
     display: none !important;

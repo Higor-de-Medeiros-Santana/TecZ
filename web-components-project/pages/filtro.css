@@ -1,6 +1,5 @@
-/* Variáveis CSS para cores e fontes */
 :root {
-    --primary-color: #ff9500; /* Azul vibrante, ajuste conforme sua marca */
+    --primary-color: #ff9500;
     --secondary-color: #000000;
     --text-color: #000000;
     --light-gray: #f8f9fa;
@@ -9,7 +8,6 @@
     --shadow-color: rgba(0, 0, 0, 0.437);
 }
 
-/* Reset básico e tipografia */
 * {
     margin: 0;
     padding: 0;
@@ -56,21 +54,19 @@ ul {
     background-color: transparent;
 }
 
-/* Contêiner principal */
 .main-container {
     display: flex;
     padding: 1.5rem 2rem;
     gap: 1.5rem;
 }
 
-/* Sidebar de Filtros */
 .sidebar {
-    flex: 0 0 250px; /* Largura fixa para a sidebar */
+    flex: 0 0 250px;
     background-color: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px var(--shadow-color);
-    align-self: flex-start; /* Alinha o sidebar ao topo */
+    align-self: flex-start;
 }
 
 .filter-group {
@@ -97,7 +93,6 @@ ul {
     transition: transform 0.3s ease;
 }
 
-/* Rotação do ícone para filtros abertos/fechados (via JS) */
 .filter-title.active i {
     transform: rotate(180deg);
 }
@@ -105,13 +100,13 @@ ul {
 .filter-options {
     list-style: none;
     padding-left: 0;
-    max-height: 0; /* Para esconder as opções por padrão */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
 
 .filter-options.expanded {
-    max-height: 500px; /* Altura suficiente para mostrar todas as opções, ajuste conforme necessário */
+    max-height: 500px;
 }
 
 .filter-options li {
@@ -133,7 +128,7 @@ ul {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
-    cursor: pointer; /* Para tornar clicável também */
+    cursor: pointer;
 }
 
 .filter-options .sub-filter span {
@@ -149,10 +144,9 @@ ul {
 }
 
 .filter-options .nested.expanded {
-    max-height: 300px; /* Ajuste conforme necessário */
+    max-height: 300px;
 }
 
-/* Grid de Produtos */
 .product-grid {
     flex-grow: 1;
     display: grid;
@@ -177,7 +171,6 @@ ul {
     align-items: center;
     text-align: center;
     transition: transform 0.2s ease-in-out;
-    /* Garante tamanho igual para todos os cards */
     height: 100%;
     min-height: 400px;
     max-height: 480px;
@@ -189,7 +182,7 @@ ul {
 }
 
 .product-rating {
-    color: #ffc107; /* Cor das estrelas */
+    color: #ffc107;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     min-height: 28px;
@@ -201,8 +194,8 @@ ul {
 
 .product-card img {
     max-width: 100%;
-    height: 150px; /* Altura fixa para as imagens */
-    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    height: 150px;
+    object-fit: contain;
     margin-bottom: 1rem;
 }
 
@@ -216,13 +209,13 @@ ul {
 .product-card p {
     font-size: 0.9rem;
     color: var(--secondary-color);
-    flex-grow: 1; /* Para que o parágrafo ocupe o espaço disponível */
+    flex-grow: 1;
     margin-bottom: 1rem;
     min-height: 48px;
 }
 
 .buy-button {
-    background-color: #ff9900; /* Cor amarela do botão, ajuste conforme a imagem */
+    background-color: #ff9900;
     color: var(--white);
     border: none;
     padding: 0.8rem 1.5rem;
@@ -235,19 +228,18 @@ ul {
 }
 
 .buy-button:hover {
-    background-color: #cc8a17; /* Um tom mais escuro para o hover */
+    background-color: #cc8a17;
 }
 
-/* Responsividade */
 @media (max-width: 992px) {
     .main-container {
         flex-direction: column;
         padding: 1rem;
-        margin-top: 1rem; /* Você pode ajustar este valor (ex: 0.5rem, 1.5rem, 2rem) */
+        margin-top: 1rem;
     }
 
     .sidebar {
-        flex: 0 0 auto; /* Permite que a sidebar ocupe a largura total */
+        flex: 0 0 auto;
         width: 100%;
         margin-bottom: 1.5rem;
     }
@@ -272,7 +264,7 @@ ul {
 
     .main-container {
         padding: 0.9rem;
-        margin-top: 1.5rem; /* Um pouco mais de espaço para telas menores */
+        margin-top: 1.5rem;
     }
 
     .sidebar {
@@ -311,7 +303,7 @@ ul {
     }
 
     .product-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+        grid-template-columns: 1fr;
     }
 
     .sidebar {

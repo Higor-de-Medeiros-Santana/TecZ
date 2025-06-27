@@ -46,7 +46,7 @@ body {
 }
 
 .category-arrow {
-    display: none; /* As setas da categoria são ocultadas no desktop POR PADRÃO */
+    display: none;
 }
 
 .category-container {
@@ -55,14 +55,14 @@ body {
     gap: 30px;
     width: 100%;
     justify-content: center;
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    overflow-x: hidden;
     -webkit-overflow-scrolling: auto;
-    scrollbar-width: none; /* Para Firefox */
-    -ms-overflow-style: none; /* Para IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .category-container::-webkit-scrollbar {
-    display: none; /* Para Webkit (Chrome, Safari) */
+    display: none;
 }
 
 .category-item {
@@ -114,7 +114,6 @@ body {
     color: #555;
 }
 
-/* Media Queries para Categoria (Desktop menor ou Tablet) */
 @media (max-width: 1024px) {
     .category-title {
         font-size: 2em;
@@ -129,7 +128,6 @@ body {
     }
 }
 
-/* Media Queries para Categoria (Mobile) - REVERTIDO O ESTILO DAS SETAS PARA O BÁSICO */
 @media (max-width: 768px) {
     .category-section {
         padding: 40px 0;
@@ -143,36 +141,35 @@ body {
         padding: 0 10px;
     }
     .category-arrow {
-        display: flex; /* Exibe as setas da categoria no mobile */
+        display: flex;
         width: 45px;
         height: 45px;
         font-size: 1.8em;
-        /* Estilo básico para as setas da categoria - SEM FUNDO LARANJA CIRCULAR */
-        background: transparent; /* Fundo transparente */
-        color: #333; /* Cor do texto/símbolo da seta */
+        background: transparent;
+        color: #333;
         border: none;
-        border-radius: 0; /* Remove border-radius para não ser circular */
-        box-shadow: none; /* Remove sombra */
+        border-radius: 0;
+        box-shadow: none;
         justify-content: center;
         align-items: center;
         cursor: pointer;
         margin: 0 5px;
-        transition: color 0.3s ease; /* Transição de cor ao invés de background */
+        transition: color 0.3s ease;
     }
     .category-arrow:hover {
-        color: #FFA500; /* Muda a cor da seta no hover */
+        color: #FFA500;
     }
     .category-container {
-        display: flex; /* Muda para flexbox para rolagem horizontal */
-        grid-template-columns: unset; /* Remove o grid */
+        display: flex;
+        grid-template-columns: unset;
         gap: 20px;
-        overflow-x: auto; /* Habilita a rolagem horizontal */
+        overflow-x: auto;
         justify-content: flex-start;
-        padding: 0 5px; /* Adiciona um pequeno padding nas laterais */
-        scroll-snap-type: x mandatory; /* Habilita o scroll-snap */
+        padding: 0 5px;
+        scroll-snap-type: x mandatory;
     }
     .category-item {
-        width: calc(50% - 15px); /* Dois itens por tela, com espaçamento */
+        width: calc(50% - 15px);
         min-width: calc(50% - 15px);
         scroll-snap-align: start;
     }

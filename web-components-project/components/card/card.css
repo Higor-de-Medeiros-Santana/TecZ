@@ -10,209 +10,6 @@
 body {
     background-color: #f8f8f8;
 }
-
-.category-section {
-    background-image: url('/web-components-project/img/fundo.jpg');
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.category-title {
-    font-size: 1.5em;
-    color: #333;
-    margin-bottom: 40px;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-.category-title::after {
-    content: '';
-    display: block;
-    width: 60%;
-    height: 4px;
-    background-color: #FFA500;
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-.category-carousel-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.category-arrow {
-    display: none; /* As setas da categoria são ocultadas no desktop POR PADRÃO */
-}
-
-.category-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    width: 100%;
-    justify-content: center;
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
-    -webkit-overflow-scrolling: auto;
-    scrollbar-width: none; /* Para Firefox */
-    -ms-overflow-style: none; /* Para IE/Edge */
-}
-
-.category-container::-webkit-scrollbar {
-    display: none; /* Para Webkit (Chrome, Safari) */
-}
-
-.category-item {
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    transition: transform 0.2s ease-in-out;
-    flex-shrink: 0;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.category-image-circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 3px solid transparent;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 15px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category-item:hover .category-image-circle {
-    border-color: #FFA500;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.category-item.active .category-image-circle {
-    border-color: #FFA500;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.category-image-circle img {
-    max-width: 80%;
-    max-height: 80%;
-    object-fit: contain;
-}
-
-.category-name {
-    font-size: 1em;
-    font-weight: 500;
-    color: #555;
-}
-
-/* Media Queries para Categoria (Desktop menor ou Tablet) */
-@media (max-width: 1024px) {
-    .category-title {
-        font-size: 2em;
-        margin-bottom: 30px;
-    }
-    .category-container {
-        gap: 25px;
-    }
-    .category-image-circle {
-        width: 110px;
-        height: 110px;
-    }
-}
-
-/* Media Queries para Categoria (Mobile) - REVERTIDO O ESTILO DAS SETAS PARA O BÁSICO */
-@media (max-width: 768px) {
-    .category-section {
-        padding: 40px 0;
-    }
-    .category-title {
-        font-size: 1.8em;
-        margin-bottom: 25px;
-    }
-    .category-carousel-wrapper {
-        justify-content: space-between;
-        padding: 0 10px;
-    }
-    .category-arrow {
-        display: flex; /* Exibe as setas da categoria no mobile */
-        width: 45px;
-        height: 45px;
-        font-size: 1.8em;
-        /* Estilo básico para as setas da categoria - SEM FUNDO LARANJA CIRCULAR */
-        background: transparent; /* Fundo transparente */
-        color: #333; /* Cor do texto/símbolo da seta */
-        border: none;
-        border-radius: 0; /* Remove border-radius para não ser circular */
-        box-shadow: none; /* Remove sombra */
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        margin: 0 5px;
-        transition: color 0.3s ease; /* Transição de cor ao invés de background */
-    }
-    .category-arrow:hover {
-        color: #FFA500; /* Muda a cor da seta no hover */
-    }
-    .category-container {
-        display: flex; /* Muda para flexbox para rolagem horizontal */
-        grid-template-columns: unset; /* Remove o grid */
-        gap: 20px;
-        overflow-x: auto; /* Habilita a rolagem horizontal */
-        justify-content: flex-start;
-        padding: 0 5px; /* Adiciona um pequeno padding nas laterais */
-        scroll-snap-type: x mandatory; /* Habilita o scroll-snap */
-    }
-    .category-item {
-        width: calc(50% - 15px); /* Dois itens por tela, com espaçamento */
-        min-width: calc(50% - 15px);
-        scroll-snap-align: start;
-    }
-    .category-image-circle {
-        width: 90px;
-        height: 90px;
-        margin-bottom: 10px;
-    }
-    .category-name {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    .category-section {
-        padding: 30px 0;
-    }
-    .category-title {
-        font-size: 1.6em;
-        margin-bottom: 20px;
-    }
-    .category-arrow {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3em;
-        margin: 0 5px;
-    }
-    .category-item {
-        width: calc(50% - 12.5px);
-        min-width: calc(50% - 12.5px);
-    }
-    .category-image-circle {
-        width: 80px;
-        height: 80px;
-    }
-    .category-name {
-        font-size: 0.85em;
-    }
-}
-
 .section-title {
     text-align: center;
     margin-top: 40px;
@@ -240,7 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    overflow: hidden; /* Garante que as setas estejam contidas e o carrossel funcione bem */
+    overflow: hidden;
 }
 
 .product-carousel-wrapper {
@@ -272,7 +69,6 @@ body {
 }
 
 .carousel-button {
-    /* Estilos base para os botões do carrossel (desktop ou se não for sobrescrito) */
     background: rgba(241, 130, 3, 0.969);
     color: white;
     border: none;
@@ -548,75 +344,70 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Media Queries para Mobile (Telas menores ou iguais a 768px) */
 @media (max-width: 768px) {
     .carousel-container {
         width: 100%;
         padding: 0;
         justify-content: center;
-        overflow: hidden; /* Garante que nada fora do container seja visível */
-        position: relative; /* Necessário para posicionar as setas absolutamente em relação a ele */
+        overflow: hidden;
+        position: relative;
     }
 
     .product-carousel-wrapper {
-        width: 100vw; /* Garante que o wrapper ocupe 100% da largura da viewport */
-        margin: 0; /* Remove margens para evitar cortes */
+        width: 100vw;
+        margin: 0;
         padding: 0;
-        overflow: hidden; /* Importante para cortar bordas visíveis */
+        overflow: hidden;
         position: relative;
     }
 
     .product-carousel-track {
         display: flex;
-        gap: 16px; /* Espaçamento entre os cards */
-        padding: 0 8px; /* Padding para as laterais do carrossel */
-        scroll-snap-type: x mandatory; /* Habilita o scroll-snap */
-        overflow-x: auto; /* Habilita a rolagem horizontal */
-        overflow-y: hidden; /* Sem rolagem vertical */
+        gap: 16px;
+        padding: 0 8px;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Para Firefox */
-        -ms-overflow-style: none; /* Para IE/Edge */
-        scroll-behavior: smooth; /* Rolagem suave para o efeito snap */
-
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
         &::-webkit-scrollbar {
-            display: none; /* Para Webkit (Chrome, Safari) */
+            display: none;
         }
-
         white-space: nowrap;
         width: auto;
         box-sizing: border-box;
-        transition: none; /* Transição controlada pelo JS ou scroll-snap nativo */
+        transition: none;
     }
 
     .product-card {
-        min-width: 90vw; /* Card ocupa 90% da largura da viewport */
+        min-width: 90vw;
         max-width: 90vw;
         flex: 0 0 90vw;
         scroll-snap-align: center;
         box-sizing: border-box;
-        margin: 0; /* Margem é tratada pelo gap no track */
+        margin: 0;
         transition: transform 0.3s cubic-bezier(.4,.6,.1,1);
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        transform: none; /* Removendo transform aqui para o scroll-snap */
+        transform: none;
     }
 
-    /* Setas de navegação dos produtos */
     .carousel-button {
-        display: flex; /* Garante que as setas estejam visíveis */
+        display: flex;
         opacity: 1;
         pointer-events: auto;
-        position: absolute; /* Posicionamento absoluto em relação ao .carousel-container */
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 20px; /* Tamanho do botão */
-        height: 20px; /* Tamanho do botão */
-        font-size: 20px; /* Tamanho do ícone */
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
         z-index: 50;
-        background: #FFA500; /* Cor de fundo laranja */
-        color: white; /* Cor do ícone branco */
+        background: #FFA500;
+        color: white;
         border: none;
-        border-radius: 50%; /* Torna o botão redondo */
+        border-radius: 50%;
         justify-content: center;
         align-items: center;
         cursor: pointer;
@@ -625,26 +416,25 @@ body {
     }
 
     .carousel-button:hover {
-        background: #FFA500; /* Cor de fundo laranja mais escura no hover */
+        background: #FFA500;
     }
 
     .carousel-button.prev {
-        left: 5px; /* Distância da borda esquerda */
+        left: 5px;
     }
 
     .carousel-button.next {
-        right: 5px; /* Distância da borda direita */
+        right: 5px;
     }
 
     .carousel-indicators {
-        display: flex !important; /* Força a exibição dos indicadores */
+        display: flex !important;
         opacity: 1 !important;
         pointer-events: auto !important;
         margin-top: 20px;
         gap: 10px;
     }
 
-    /* Removendo efeitos de hover em dispositivos de toque */
     .product-card:hover {
         transform: none;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -655,14 +445,12 @@ body {
     }
 }
 
-/* Ajuste para telas muito pequenas (ex: 320px - iPhones SE) */
 @media (max-width: 480px) {
     .product-card {
-        min-width: 96vw; /* Ocupa mais largura em telas muito pequenas */
+        min-width: 96vw;
         max-width: 96vw;
         flex: 0 0 96vw;
     }
-    /* Remover possíveis overrides antigos */
     .product-carousel-wrapper {
         width: 100vw;
         margin: 0;
@@ -670,7 +458,6 @@ body {
     }
 }
 
-/* Media Queries para Desktop (Telas maiores que 768px) */
 @media (min-width: 769px) {
     .carousel-container {
         max-width: 1500px;
@@ -679,11 +466,11 @@ body {
         align-items: center;
         justify-content: center;
         padding: 0;
-        overflow: visible; /* Permite que o conteúdo se estenda além do container */
+        overflow: visible;
     }
 
     .product-carousel-wrapper {
-        overflow: visible; /* Permite que o conteúdo se estenda além do wrapper */
+        overflow: visible;
         padding: 0;
         width: 100%;
         margin: 0 auto;
@@ -691,14 +478,14 @@ body {
 
     .product-carousel-track {
         display: flex;
-        flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+        flex-wrap: wrap;
         justify-content: center;
-        transform: none !important; /* Garante que a transformação JS seja desativada */
+        transform: none !important;
         white-space: normal;
-        padding: 0; /* Ajustado para 0, pois o gap irá lidar com o espaçamento */
-        gap: 30px; /* Espaçamento entre os cards no layout de grid do desktop */
-        scroll-snap-type: none; /* Desativa o scroll snap para desktop */
-        overflow-x: visible; /* Garante que o conteúdo seja visível, sem barra de rolagem */
+        padding: 0;
+        gap: 30px;
+        scroll-snap-type: none;
+        overflow-x: visible;
         -webkit-overflow-scrolling: auto;
         scrollbar-width: auto;
         -ms-overflow-style: auto;
@@ -706,12 +493,12 @@ body {
 
     .product-card {
         width: 300px;
-        margin: 20px 0; /* Ajustado para desktop, sem margens laterais extras, o gap lida com isso */
+        margin: 20px 0;
     }
 
     .carousel-button,
     .carousel-indicators {
-        display: none; /* Oculta as setas e indicadores no desktop */
+        display: none;
         opacity: 0;
         pointer-events: none;
     }

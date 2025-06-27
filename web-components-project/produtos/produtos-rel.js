@@ -1,4 +1,3 @@
-// Carousel só no mobile (até 900px)
 document.addEventListener('DOMContentLoaded', function () {
   function isMobile() {
     return window.innerWidth <= 900;

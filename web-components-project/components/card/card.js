@@ -4,6 +4,7 @@ class CardComponent extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="/web-components-project/components/card/card.css">
+      <link rel="stylesheet" href="/web-components-project/components/card/seção.css">
       <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
       <section class="category-section">
         <h2 class="category-title">Busque por Categoria</h2>
@@ -434,8 +435,6 @@ class CardComponent extends HTMLElement {
         </div>
       </section>
     `;
-
- // --- Script do carrossel de categorias ---
     setTimeout(() => {
       const shadow = this.shadowRoot;
       const categoryContainer = shadow.querySelector('.category-container');
@@ -455,8 +454,6 @@ class CardComponent extends HTMLElement {
           });
         });
       }
-
-      // --- Script dos carrosseis de produtos (Acer style mobile/carousel fix) ---
       const carouselContainers = shadow.querySelectorAll('.carousel-container');
       carouselContainers.forEach(container => {
         const carouselTrack = container.querySelector('.product-carousel-track');
@@ -514,8 +511,6 @@ class CardComponent extends HTMLElement {
           if (prevButton) prevButton.disabled = currentIndex === 0;
           if (nextButton) nextButton.disabled = currentIndex === totalCards - 1;
         }
-
-        // Detecta mobile para usar scrollIntoView, desktop usa transform
         if (window.innerWidth <= 768) {
           if (prevButton) {
             prevButton.addEventListener('click', () => {
@@ -531,7 +526,6 @@ class CardComponent extends HTMLElement {
               updateIndicators();
             });
           }
-          // Atualiza currentIndex ao arrastar manualmente
           carouselTrack.addEventListener('scroll', () => {
             let minDiff = Infinity, idx = 0;
             productCards.forEach((card, i) => {
@@ -547,7 +541,6 @@ class CardComponent extends HTMLElement {
             }
           });
         } else {
-          // Desktop: múltiplos cards, como seu código original
           if (prevButton) {
             prevButton.addEventListener('click', () => {
               if (currentIndex > 0) {
@@ -566,7 +559,6 @@ class CardComponent extends HTMLElement {
               }
             });
           }
-          // Redimensiona corretamente
           window.addEventListener('resize', () => {
             scrollToCurrent();
             createIndicators();

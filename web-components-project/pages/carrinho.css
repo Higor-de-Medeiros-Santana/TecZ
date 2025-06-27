@@ -1,4 +1,3 @@
-
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f5f6fa;
@@ -228,7 +227,6 @@ body {
   box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
-/* Tablet */
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -247,7 +245,6 @@ body {
   }
 }
 
-/* MOBILE: estilo Magalu/Kabum */
 @media (max-width: 600px) {
   body {
     background: #fff;
@@ -311,13 +308,11 @@ body {
     padding: 16px 0;
     margin: 0;
   }
-  /* Remove largura fixa máxima do container */
   .container, .cart-main, .cart-summary {
     max-width: 100%;
     min-width: 0;
     width: 100%;
   }
-  /* Adjusted product layout for mobile */
   .cart-product {
     flex-direction: row;
     flex-wrap: wrap;
@@ -389,7 +384,7 @@ body {
     border-radius: 7px;
     background: transparent;
     padding: 6px 18px;
-    margin: 20px 0 10px 0; /* Adjusted margin-top to 20px to move it down */
+    margin: 20px 0 10px 0; 
     font-size: 1em;
     text-align: center;
     transition: background 0.2s, color 0.2s;

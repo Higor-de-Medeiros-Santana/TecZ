@@ -38,7 +38,6 @@
     position: relative;
 }
 
-/** Breadcrumb **/
 .single-product .breadcrumb{
     background: #48484810;
     padding: 8px 4px;
@@ -59,7 +58,6 @@
     color: var(--primary-color);
 }
 
-/** product image **/
 .single-product .product-image{
     width: 100%;
 }
@@ -89,7 +87,6 @@
     cursor: pointer;
 }
 
-/** product title **/
 .product-title{
     margin-top: 20px;
 }
@@ -100,7 +97,6 @@
     letter-spacing: -0.02rem;
 }
 
-/** product rating **/
 .product-rating{
     display: flex;
     margin-top: 4px;
@@ -116,7 +112,6 @@
     font-weight: 500;
 }
 
-/** Product price **/
 .product-price{
     display: flex;
     align-items: center;
@@ -141,7 +136,6 @@
     margin-left: 12px;
 }
 
-/** Product Details **/
 .product-details{
     margin: 10px 0;
 }
@@ -155,7 +149,6 @@
     line-height: 1.2rem;
 }
 
-/** Product size **/
 .product-size{
     margin: 10px 0;
 }
@@ -194,7 +187,6 @@
     box-shadow: 0 3px 6px var(--shadow);
 }
 
-/** Product Color **/
 .product-color{
     margin: 10px 0;
     justify-content: center;
@@ -232,7 +224,6 @@
     display: none;
 }
 
-/** divider **/
 .divider{
     display: block;
     height: 1px;
@@ -241,7 +232,6 @@
     margin: 20px 0;
 }
 
-/** product Button Group **/
 .product-btn-group {
     display: flex;
     flex-direction: column;
@@ -311,7 +301,6 @@
     padding: 0;
 }
 
-/* Ícones nos botões */
 .product-btn-group button i,
 .product-btn-group .button i {
     font-size: 1.1rem;
@@ -320,7 +309,6 @@
     color: #ffa500;
     font-size: 1.1rem;
 }
-/* Bloco de Especificações Acer */
 .box-acer-specs {
     margin: 40px auto 32px auto;
     background: #f8f8f8;
@@ -363,7 +351,6 @@
     border-bottom: none;
 }
 
-/* Reviews Section */
 .reviews-section {
     margin: 40px auto 32px auto;
     background: #f8f8f8;
@@ -504,13 +491,10 @@
     border: 1px solid var(--bg-grey);
 }
 
-/* Estilo para a miniatura ativa (para o carrossel desktop) */
 .image-list.active-thumbnail {
     border: 2px solid var(--primary-color);
 }
 
-
-/* ---------- MEDIA QUERIES ---------- */
 @media screen and (max-width:1080px) {
     .single-product, .box-acer-specs, .reviews-section {
         width: 100%;
@@ -552,47 +536,46 @@
         width: 100%;
         position: relative;
     }
-    /* Esconde a imagem principal estática e o slider de miniaturas padrão no mobile */
     .product-image .product-image-main,
     .product-image-slider {
         display: none !important;
     }
     .mobile-product-carousel {
-        display: flex; /* Exibe o carrossel no mobile */
+        display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         position: relative;
         background: var(--bg-grey);
         padding: 10px 0;
-        gap: 8px; /* Espaço entre as setas e a imagem */
+        gap: 8px;
     }
     .carousel-images {
-        width: 220px; /* Largura da área da imagem */
-        height: 220px; /* Altura da área da imagem */
+        width: 220px;
+        height: 220px;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden; /* Garante que apenas uma imagem seja visível por vez */
+        overflow: hidden;
         position: relative;
     }
     .carousel-img {
-        display: none; /* Oculta todas as imagens por padrão */
+        display: none;
         width: 100%;
         height: 100%;
         object-fit: contain;
         border-radius: 4px;
-        transition: opacity 0.3s; /* Transição suave para a opacidade */
-        position: absolute; /* Posiciona as imagens uma em cima da outra */
+        transition: opacity 0.3s;
+        position: absolute;
         left: 0; top: 0;
     }
-    .carousel-img.active { /* A imagem ativa é exibida */
+    .carousel-img.active {
         display: block;
-        position: relative; /* Restaura o posicionamento para ser visível */
+        position: relative;
         opacity: 1;
         z-index: 1;
     }
-    .carousel-arrow { /* Estilo das setas de navegação */
+    .carousel-arrow {
         background: #fff;
         border: 1px solid var(--grey);
         border-radius: 50%;
@@ -604,7 +587,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 2; /* Garante que as setas fiquem acima das imagens */
+        z-index: 2;
         box-shadow: 0 1px 4px #ccc;
         transition: background 0.2s, color 0.2s;
     }
@@ -646,7 +629,6 @@
         width: 110px;
     }
 
-    /* Responsive adjustments for reviews section (mobile) */
     .reviews-section {
         padding: 8px 1vw;
     }
@@ -697,7 +679,6 @@
         height: 50px;
     }
 
-    /* PREÇO: Valor promocional EM CIMA e riscado EMBAIXO no mobile */
     .product-price {
         flex-direction: column;
         align-items: flex-start;
@@ -718,12 +699,10 @@
     }
 }
 
-/* Esconde o carrossel mobile em telas maiores que 520px */
 @media screen and (min-width: 521px) {
     .mobile-product-carousel {
         display: none !important;
     }
-    /* Garante que o product-image-main original e o slider de miniaturas sejam exibidos no desktop */
     .product-image .product-image-main {
         display: block !important;
         position: relative;
@@ -740,18 +719,4 @@
     .product-image-slider {
         display: flex !important;
     }
-}
-
-/* --------- CORREÇÃO BOXICONS --------- */
-.bx, .bxs, .bxl {
-  font-family: 'boxicons' !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  line-height: 1 !important;
-  letter-spacing: normal !important;
-  speak: never !important;
-  -webkit-font-feature-settings: "liga" !important;
-  -webkit-font-smoothing: antialiased !important;
 }

@@ -1,4 +1,3 @@
-// Dados de exemplo (pode ser carregado de backend)
 let cart = [
   {
     id: 1,

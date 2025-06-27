@@ -106,11 +106,11 @@ class CarouselComponent extends HTMLElement {
       autoSlideInterval = setInterval(nextSlide, slideTime);
     };
 
-    // Inicializa o carrossel
+    
     showSlide(currentSlideIndex);
     startAutoSlide();
 
-    // Event listeners
+   
     sliderLeftArrow.addEventListener("click", () => {
       prevSlide();
       resetAutoSlide();
