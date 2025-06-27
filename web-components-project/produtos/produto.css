@@ -13,7 +13,7 @@
     --grey:#484848;
     --bg-grey: #efefef;
     --shadow: #949494;
-    --white:rgb(255, 255, 255)f;
+    --white:rgb(255, 255, 255);
 }
 
 .container{
@@ -119,9 +119,15 @@
 /** Product price **/
 .product-price{
     display: flex;
-    position: relative;
-    margin: 10px 0;
     align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    min-width: 0;
+    max-width: 100%;
+}
+.product-price .offer-price,
+.product-price .sale-price {
+    white-space: nowrap;
 }
 .product-price .offer-price{
     font-size: 48px;
@@ -210,7 +216,21 @@
     height: 40px;
     display: inline-block;
 }
-
+.product-color .color-layout .black{
+    background-color: black;
+}
+.product-color .color-layout .red{
+    background-color: red;
+}
+.product-color .color-layout .blue{
+    background-color: blue;
+}
+.product-color .color-layout input[type="radio"]:checked + label{
+    box-shadow: 0 3px 6px var(--shadow);
+}
+.product-color .color-layout .color-input{
+    display: none;
+}
 
 /** divider **/
 .divider{
@@ -322,7 +342,7 @@
     background: #f8f8f8;
     border-radius: 12px;
     max-width: 1080px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow for better visibility */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 24px 32px;
 }
 
@@ -463,7 +483,6 @@
 }
 
 
-
 /* ---------- MEDIA QUERIES ---------- */
 @media screen and (max-width:1080px) {
     .single-product, .box-acer-specs, .reviews-section {
@@ -498,7 +517,7 @@
     .product-image-slider {
         display: none !important;
     }
-    .mobile-product-carousel { /* Novo carrossel principal para mobile */
+    .mobile-product-carousel {
         display: flex; /* Exibe o carrossel no mobile */
         align-items: center;
         justify-content: center;
@@ -637,6 +656,26 @@
         width: 50px;
         height: 50px;
     }
+
+    /* PREÇO: Valor promocional EM CIMA e riscado EMBAIXO no mobile */
+    .product-price {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0 18px 0;
+        gap: 4px;
+    }
+    .product-price .offer-price {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        display: block;
+    }
+    .product-price .sale-price {
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 2px;
+        display: block;
+    }
 }
 
 /* Esconde o carrossel mobile em telas maiores que 520px */
@@ -661,4 +700,18 @@
     .product-image-slider {
         display: flex !important;
     }
+}
+
+/* --------- CORREÇÃO BOXICONS --------- */
+.bx, .bxs, .bxl {
+  font-family: 'boxicons' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1 !important;
+  letter-spacing: normal !important;
+  speak: never !important;
+  -webkit-font-feature-settings: "liga" !important;
+  -webkit-font-smoothing: antialiased !important;
 }
