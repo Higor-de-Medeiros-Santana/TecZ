@@ -188,7 +188,7 @@
     border: 1px solid var(--grey);
 }
 .product-size .size-layout input[type="radio"]:checked + .size{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 104, 29);
     border: 1px solid var(--grey);
     color: var(--bg-grey);
     box-shadow: 0 3px 6px var(--shadow);
@@ -242,57 +242,84 @@
 }
 
 /** product Button Group **/
-.product-btn-group{
+.product-btn-group {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 20px;
+    align-items: flex-start;
 }
-.product-btn-group .button{
+.product-btn-group .action-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+}
+
+.product-btn-group button,
+.product-btn-group .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: 500;
-}
-.product-btn-group .buy-now{
-    background-color: var(--accent-color);
-    color: #fff;
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
+    gap: 8px;
+    padding: 13px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
-}
-.product-btn-group .buy-now i{
-    font-size: 20px;
-}
-.product-btn-group .buy-now:hover{
-    box-shadow: 0 3px 6px var(--shadow);
-}
-.product-btn-group .add-cart{
-    background-color: var(--bg-grey);
-    color: var(--grey);
-    border-radius: 4px;
-    cursor: pointer;
-}
-.product-btn-group .add-cart i{
-    font-size: 20px;
-}
-.product-btn-group .add-cart:hover{
-    box-shadow: 0 3px 6px var(--shadow);
-    background: var(--grey);
-    color: #fff;
-}
-.product-btn-group .heart{
-    color: var(--grey);
-    cursor: pointer;
-}
-.product-btn-group .heart i{
-    font-size: 20px;
-}
-.product-btn-group .heart:hover{
-    color: var(--accent-color);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    min-width: 0;
+    white-space: nowrap;
 }
 
+.product-btn-group .add-to-cart,
+.product-btn-group .add-cart {
+    background-color: #3f3f3f;
+    color: #fff;
+    border: none;
+}
+.product-btn-group .add-to-cart:hover,
+.product-btn-group .add-cart:hover {
+    background-color: #388e3c;
+    color: #fff;
+}
+
+.product-btn-group .add-to-wishlist,
+.product-btn-group .heart {
+    background-color: #3f3f3f;
+    color: #ffa500;
+    border: 2px solid #ffa500;
+}
+.product-btn-group .add-to-wishlist:hover,
+.product-btn-group .heart:hover {
+    background-color: #5d5c5c;
+    color: #ef7e0c;
+    border-color: #ef7e0c;
+}
+
+.product-btn-group .delivery {
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.97rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: default;
+    padding: 0;
+}
+
+/* Ícones nos botões */
+.product-btn-group button i,
+.product-btn-group .button i {
+    font-size: 1.1rem;
+}
+.product-btn-group .delivery i {
+    color: #ffa500;
+    font-size: 1.1rem;
+}
 /* Bloco de Especificações Acer */
 .box-acer-specs {
     margin: 40px auto 32px auto;
@@ -495,7 +522,20 @@
         padding: 14px 2vw;
     }
 }
-
+ @media (max-width: 700px) {
+    .product-btn-group .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .product-btn-group button,
+    .product-btn-group .button {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.97rem;
+        padding: 12px 0;
+    }
+}
 @media screen and (max-width:520px) {
     .container{
         padding: 20px;
