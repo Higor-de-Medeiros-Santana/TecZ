@@ -437,6 +437,7 @@ class CardComponent extends HTMLElement {
     `;
     setTimeout(() => {
       const shadow = this.shadowRoot;
+
       const categoryContainer = shadow.querySelector('.category-container');
       const categoryArrowLeft = shadow.querySelector('.category-section .category-arrow-left');
       const categoryArrowRight = shadow.querySelector('.category-section .category-arrow-right');
@@ -454,26 +455,51 @@ class CardComponent extends HTMLElement {
           });
         });
       }
+
       const carouselContainers = shadow.querySelectorAll('.carousel-container');
       carouselContainers.forEach(container => {
         const carouselTrack = container.querySelector('.product-carousel-track');
-        const productCards = carouselTrack.querySelectorAll('.product-card');
+        const productCards = Array.from(carouselTrack.querySelectorAll('.product-card'));
         const prevButton = container.querySelector('.carousel-button.prev');
         const nextButton = container.querySelector('.carousel-button.next');
         const indicatorsContainer = shadow.querySelector(`#${container.id.replace('-carousel', '-indicators')}`);
 
         let currentIndex = 0;
         const totalCards = productCards.length;
+        let cardsInView = 1; 
 
         if (totalCards === 0) {
           container.style.display = 'none';
           return;
         }
 
+        function isMobile() {
+          return window.matchMedia("(max-width: 768px)").matches;
+        }
+
+        function calculateCardsInView() {
+          if (productCards.length === 0) return 1;
+
+          if (isMobile()) {
+            cardsInView = 1; 
+          } else {
+            cardsInView = 3; 
+          }
+           if (cardsInView > totalCards) cardsInView = totalCards;
+        }
+
         function createIndicators() {
           if (!indicatorsContainer) return;
+
+          if (!isMobile()) {
+            indicatorsContainer.innerHTML = '';
+            indicatorsContainer.style.display = 'none';
+            return;
+          }
+
           indicatorsContainer.innerHTML = '';
-          for (let i = 0; i < totalCards; i++) {
+          const totalPages = totalCards; 
+          for (let i = 0; i < totalPages; i++) {
             const indicator = document.createElement('div');
             indicator.classList.add('indicator');
             if (i === currentIndex) {
@@ -486,10 +512,11 @@ class CardComponent extends HTMLElement {
             });
             indicatorsContainer.appendChild(indicator);
           }
+          indicatorsContainer.style.display = 'flex';
         }
 
         function updateIndicators() {
-          if (!indicatorsContainer) return;
+          if (!indicatorsContainer || !isMobile()) return;
           const indicators = indicatorsContainer.querySelectorAll('.indicator');
           indicators.forEach((ind, i) => {
             ind.classList.toggle('active', i === currentIndex);
@@ -497,74 +524,65 @@ class CardComponent extends HTMLElement {
         }
 
         function scrollToCurrent() {
-          if (window.innerWidth <= 768) {
-            productCards[currentIndex].scrollIntoView({
-              behavior: 'smooth',
-              inline: 'center',
-              block: 'nearest'
-            });
-          } else {
-            const slideWidth = productCards[0].offsetWidth;
-            const offset = -currentIndex * slideWidth;
-            carouselTrack.style.transform = `translateX(${offset}px)`;
+          if (totalCards === 0) return;
+
+          if (!isMobile()) {
+            carouselTrack.style.transform = `translateX(0px)`;
+            if (prevButton) prevButton.style.display = 'none';
+            if (nextButton) nextButton.style.display = 'none';
+            if (indicatorsContainer) indicatorsContainer.style.display = 'none';
+            return;
           }
+
+          const cardStyle = window.getComputedStyle(productCards[0]);
+          const cardWidth = productCards[0].offsetWidth;
+          const cardMarginLeft = parseFloat(cardStyle.marginLeft);
+          const cardMarginRight = parseFloat(cardStyle.marginRight);
+          const totalCardWidth = cardWidth + cardMarginLeft + cardMarginRight;
+
+          const wrapperWidth = carouselTrack.parentElement.offsetWidth;
+          let offset = -(currentIndex * totalCardWidth) + (wrapperWidth / 2) - (totalCardWidth / 2);
+
+          const maxOffset = -(totalCards * totalCardWidth - wrapperWidth);
+          if (maxOffset > 0) offset = 0;
+          else if (offset < maxOffset) offset = maxOffset;
+          if (offset > 0) offset = 0;
+
+          carouselTrack.style.transition = 'transform 0.3s ease-in-out'; 
+          carouselTrack.style.transform = `translateX(${offset}px)`;
+
+          if (prevButton) prevButton.style.display = 'flex';
+          if (nextButton) nextButton.style.display = 'flex';
+          if (indicatorsContainer) indicatorsContainer.style.display = 'flex';
+
+
           if (prevButton) prevButton.disabled = currentIndex === 0;
           if (nextButton) nextButton.disabled = currentIndex === totalCards - 1;
         }
-        if (window.innerWidth <= 768) {
-          if (prevButton) {
-            prevButton.addEventListener('click', () => {
-              if (currentIndex > 0) currentIndex--;
-              scrollToCurrent();
-              updateIndicators();
-            });
-          }
-          if (nextButton) {
-            nextButton.addEventListener('click', () => {
-              if (currentIndex < totalCards - 1) currentIndex++;
-              scrollToCurrent();
-              updateIndicators();
-            });
-          }
-          carouselTrack.addEventListener('scroll', () => {
-            let minDiff = Infinity, idx = 0;
-            productCards.forEach((card, i) => {
-              const diff = Math.abs(card.getBoundingClientRect().left - carouselTrack.getBoundingClientRect().left);
-              if (diff < minDiff) {
-                minDiff = diff;
-                idx = i;
-              }
-            });
-            if (currentIndex !== idx) {
-              currentIndex = idx;
-              updateIndicators();
-            }
-          });
-        } else {
-          if (prevButton) {
-            prevButton.addEventListener('click', () => {
-              if (currentIndex > 0) {
-                currentIndex--;
-                scrollToCurrent();
-                updateIndicators();
-              }
-            });
-          }
-          if (nextButton) {
-            nextButton.addEventListener('click', () => {
-              if (currentIndex < totalCards - 1) {
-                currentIndex++;
-                scrollToCurrent();
-                updateIndicators();
-              }
-            });
-          }
-          window.addEventListener('resize', () => {
+
+        if (prevButton) {
+          prevButton.addEventListener('click', () => {
+            currentIndex = Math.max(0, currentIndex - 1);
             scrollToCurrent();
-            createIndicators();
+            updateIndicators();
+          });
+        }
+        if (nextButton) {
+          nextButton.addEventListener('click', () => {
+            currentIndex = Math.min(totalCards - 1, currentIndex + 1);
+            scrollToCurrent();
+            updateIndicators();
           });
         }
 
+        window.addEventListener('resize', () => {
+          calculateCardsInView();
+          createIndicators();
+          scrollToCurrent();
+          updateIndicators();
+        });
+
+        calculateCardsInView();
         createIndicators();
         scrollToCurrent();
         updateIndicators();
