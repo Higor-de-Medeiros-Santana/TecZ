@@ -438,7 +438,7 @@ class CardComponent extends HTMLElement {
     setTimeout(() => {
       const shadow = this.shadowRoot;
 
-      // --- Lógica do Carrossel de Categorias (inalterada) ---
+    
       const categoryContainer = shadow.querySelector('.category-container');
       const categoryArrowLeft = shadow.querySelector('.category-section .category-arrow-left');
       const categoryArrowRight = shadow.querySelector('.category-section .category-arrow-right');
@@ -456,7 +456,7 @@ class CardComponent extends HTMLElement {
           });
         });
       }
-      // --- Fim da Lógica do Carrossel de Categorias ---
+     
 
       const carouselContainers = shadow.querySelectorAll('.carousel-container');
       carouselContainers.forEach(container => {
@@ -468,26 +468,26 @@ class CardComponent extends HTMLElement {
 
         let currentIndex = 0;
         const totalCards = productCards.length;
-        let cardsInView = 1; // Quantidade de cards visíveis de uma vez
+        let cardsInView = 1; 
 
         if (totalCards === 0) {
           container.style.display = 'none';
           return;
         }
 
-        // Função para verificar se está em mobile
+   
         function isMobile() {
           return window.matchMedia("(max-width: 768px)").matches;
         }
 
-        // Calcula quantos cards cabem na tela
+       
         function calculateCardsInView() {
           if (productCards.length === 0) return 1;
 
           if (isMobile()) {
-            cardsInView = 1; // Sempre 1 card visível por vez em mobile
+            cardsInView = 1; 
           } else {
-            cardsInView = 3; // Em desktop, assume 3 cards por linha
+            cardsInView = 3; 
           }
            if (cardsInView > totalCards) cardsInView = totalCards;
         }
@@ -502,7 +502,7 @@ class CardComponent extends HTMLElement {
           }
 
           indicatorsContainer.innerHTML = '';
-          const totalPages = totalCards; // Um indicador por card
+          const totalPages = totalCards; 
           for (let i = 0; i < totalPages; i++) {
             const indicator = document.createElement('div');
             indicator.classList.add('indicator');
@@ -538,25 +538,24 @@ class CardComponent extends HTMLElement {
             return;
           }
 
-          // Pega a largura do card E as margens laterais do card
+         
           const cardStyle = window.getComputedStyle(productCards[0]);
           const cardWidth = productCards[0].offsetWidth;
           const cardMarginLeft = parseFloat(cardStyle.marginLeft);
           const cardMarginRight = parseFloat(cardStyle.marginRight);
-          const totalCardWidth = cardWidth + cardMarginLeft + cardMarginRight; // Largura total com as margens
+          const totalCardWidth = cardWidth + cardMarginLeft + cardMarginRight; 
 
-          // Calcula o offset para centralizar o card atual
-          // Pega a largura visível do container do carrossel (product-carousel-wrapper)
+          
           const wrapperWidth = carouselTrack.parentElement.offsetWidth;
           let offset = -(currentIndex * totalCardWidth) + (wrapperWidth / 2) - (totalCardWidth / 2);
 
-          // Limita o offset para não ir além dos limites do carrossel
+          
           const maxOffset = -(totalCards * totalCardWidth - wrapperWidth);
           if (maxOffset > 0) offset = 0;
           else if (offset < maxOffset) offset = maxOffset;
           if (offset > 0) offset = 0;
 
-          carouselTrack.style.transition = 'transform 0.3s ease-in-out'; // Velocidade da transição aumentada
+          carouselTrack.style.transition = 'transform 0.3s ease-in-out'; 
           carouselTrack.style.transform = `translateX(${offset}px)`;
 
           if (prevButton) prevButton.style.display = 'flex';
@@ -583,7 +582,7 @@ class CardComponent extends HTMLElement {
           });
         }
 
-        // Atualiza o carrossel ao redimensionar a janela
+        
         window.addEventListener('resize', () => {
           calculateCardsInView();
           createIndicators();
@@ -591,7 +590,6 @@ class CardComponent extends HTMLElement {
           updateIndicators();
         });
 
-        // Inicializa o carrossel
         calculateCardsInView();
         createIndicators();
         scrollToCurrent();
