@@ -3,7 +3,7 @@ class HeaderComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/header/header.css">
+      <link rel="stylesheet" href="/web-components-project/components/header/header.css">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
       <header>

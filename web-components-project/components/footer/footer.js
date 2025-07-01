@@ -3,7 +3,7 @@ class FooterComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/footer/footer.css">
+      <link rel="stylesheet" href="/web-components-project/components/footer/footer.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
       <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
       <footer>

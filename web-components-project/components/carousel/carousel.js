@@ -3,14 +3,14 @@ class CarouselComponent extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="./components/carousel/carousel.css">
+      <link rel="stylesheet" href="/web-components-project/components/carousel/carousel.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
       <section class="slider">
         <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
-        <img src="img/1.png" alt="slide-1.jpg">
-        <img src="img/2.png" alt="slide-2.jpg">
-        <img src="img/3.png" alt="slide-3.jpg">
-        <img src="img/4.png" alt="slide-4.jpg">
+        <img src="/web-components-project/img/1.png" alt="slide-1.jpg">
+        <img src="/web-components-project/img/2.png" alt="slide-2.jpg">
+        <img src="/web-components-project/img/3.png" alt="slide-3.jpg">
+        <img src="/web-components-project/img/4.png" alt="slide-4.jpg">
         <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
         <div class="paginacao">
             <div class="botao"><i class="far fa-circle"></i></div>

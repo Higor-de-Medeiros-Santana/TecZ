@@ -13,25 +13,25 @@ class CardComponent extends HTMLElement {
           <div class="category-container">
             <a href="#" class="category-item">
               <div class="category-image-circle">
-                <img src="img/notebook.webp" alt="Imagem de Notebooks">
+                <img src="/web-components-project/img/notebook.webp" alt="Imagem de Notebooks">
               </div>
               <p class="category-name">Notebooks</p>
             </a>
             <a href="#" class="category-item">
               <div class="category-image-circle">
-                <img src="img/monitor-1.png" alt="Imagem de Monitores">
+                <img src="/web-components-project/img/monitor-1.png" alt="Imagem de Monitores">
               </div>
               <p class="category-name">Monitores</p>
             </a>
             <a href="#" class="category-item">
               <div class="category-image-circle">
-                <img src="img/pc-gamer-completo-aquario-curvo-preto_620x620+fill_ffffff-Photoroom.png" alt="Imagem de Computadores">
+                <img src="/web-components-project/img/pc-gamer-completo-aquario-curvo-preto_620x620+fill_ffffff-Photoroom.png" alt="Imagem de Computadores">
               </div>
               <p class="category-name">Computadores</p>
             </a>
             <a href="#" class="category-item">
               <div class="category-image-circle">
-                <img src="img/headset_gamer.png" alt="Imagem de Periféricos">
+                <img src="/web-components-project/img/headset_gamer.png" alt="Imagem de Periféricos">
               </div>
               <p class="category-name">Periféricos</p>
             </a>
@@ -52,7 +52,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/acer.png" alt="Monitor Gamer HQ 24">
+                      <img src="/web-components-project/img/acer.png" alt="Monitor Gamer HQ 24">
                     </div>
                   </div>
                   <div class="product-info">
@@ -83,7 +83,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
                         <span class="rating-count">352 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -96,7 +96,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/monitor-car.png" alt="Notebook Gamer Acer Nitro V15">
+                      <img src="/web-components-project/img/monitor-car.png" alt="Notebook Gamer Acer Nitro V15">
                     </div>
                   </div>
                   <div class="product-info">
@@ -127,7 +127,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
                         <span class="rating-count">361 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -140,7 +140,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/mac.png" alt="Teclado Mecânico Gamer RGB">
+                      <img src="/web-components-project/img/mac.png" alt="Teclado Mecânico Gamer RGB">
                     </div>
                   </div>
                   <div class="product-info">
@@ -171,7 +171,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
                         <span class="rating-count">120 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -184,7 +184,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Mais Vendido</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/pc-1.png" alt="PC Gamer de Alta Performance">
+                      <img src="/web-components-project/img/pc-1.png" alt="PC Gamer de Alta Performance">
                     </div>
                   </div>
                   <div class="product-info">
@@ -215,7 +215,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
                         <span class="rating-count">280 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -249,7 +249,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/samsung.png" alt="Mouse Gamer Ultra Leve">
+                      <img src="/web-components-project/img/samsung.png" alt="Mouse Gamer Ultra Leve">
                     </div>
                   </div>
                   <div class="product-info">
@@ -280,7 +280,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
                         <span class="rating-count">115 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -293,7 +293,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/monitor-2.png" alt="Monitor Gamer PCFort T2701">
+                      <img src="/web-components-project/img/monitor-2.png" alt="Monitor Gamer PCFort T2701">
                     </div>
                   </div>
                   <div class="product-info">
@@ -324,7 +324,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
                         <span class="rating-count">50 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -337,7 +337,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/monitor-1.png" alt="Monitor-2">
+                      <img src="/web-components-project/img/monitor-1.png" alt="Monitor-2">
                     </div>
                   </div>
                   <div class="product-info">
@@ -368,7 +368,7 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(5)}
                         <span class="rating-count">90 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -381,7 +381,7 @@ class CardComponent extends HTMLElement {
                   <div class="product-badge">Lançamento</div>
                   <div class="product-tilt-effect">
                     <div class="product-image">
-                      <img src="img/teclado.png" alt="Teclado Mecânico Gamer RGB">
+                      <img src="/web-components-project/img/teclado.png" alt="Teclado Mecânico Gamer RGB">
                     </div>
                   </div>
                   <div class="product-info">
@@ -412,8 +412,8 @@ class CardComponent extends HTMLElement {
                     </div>
                     <div class="product-meta">
                       <div class="product-rating">
-                        ${'<img src="img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
-                        <img src="img/estrela.png" alt="Estrela de avaliação vazia" width="16" height="16" class="rating-star-img">
+                        ${'<img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação" width="16" height="16" class="rating-star-img">'.repeat(4)}
+                        <img src="/web-components-project/img/estrela.png" alt="Estrela de avaliação vazia" width="16" height="16" class="rating-star-img">
                         <span class="rating-count">195 Avaliações</span>
                       </div>
                       <div class="product-stock">Em estoque</div>
@@ -438,6 +438,7 @@ class CardComponent extends HTMLElement {
     setTimeout(() => {
       const shadow = this.shadowRoot;
 
+      // --- Lógica do Carrossel de Categorias (inalterada) ---
       const categoryContainer = shadow.querySelector('.category-container');
       const categoryArrowLeft = shadow.querySelector('.category-section .category-arrow-left');
       const categoryArrowRight = shadow.querySelector('.category-section .category-arrow-right');
@@ -455,6 +456,7 @@ class CardComponent extends HTMLElement {
           });
         });
       }
+      // --- Fim da Lógica do Carrossel de Categorias ---
 
       const carouselContainers = shadow.querySelectorAll('.carousel-container');
       carouselContainers.forEach(container => {
@@ -466,24 +468,26 @@ class CardComponent extends HTMLElement {
 
         let currentIndex = 0;
         const totalCards = productCards.length;
-        let cardsInView = 1; 
+        let cardsInView = 1; // Quantidade de cards visíveis de uma vez
 
         if (totalCards === 0) {
           container.style.display = 'none';
           return;
         }
 
+        // Função para verificar se está em mobile
         function isMobile() {
           return window.matchMedia("(max-width: 768px)").matches;
         }
 
+        // Calcula quantos cards cabem na tela
         function calculateCardsInView() {
           if (productCards.length === 0) return 1;
 
           if (isMobile()) {
-            cardsInView = 1; 
+            cardsInView = 1; // Sempre 1 card visível por vez em mobile
           } else {
-            cardsInView = 3; 
+            cardsInView = 3; // Em desktop, assume 3 cards por linha
           }
            if (cardsInView > totalCards) cardsInView = totalCards;
         }
@@ -498,7 +502,7 @@ class CardComponent extends HTMLElement {
           }
 
           indicatorsContainer.innerHTML = '';
-          const totalPages = totalCards; 
+          const totalPages = totalCards; // Um indicador por card
           for (let i = 0; i < totalPages; i++) {
             const indicator = document.createElement('div');
             indicator.classList.add('indicator');
@@ -534,21 +538,25 @@ class CardComponent extends HTMLElement {
             return;
           }
 
+          // Pega a largura do card E as margens laterais do card
           const cardStyle = window.getComputedStyle(productCards[0]);
           const cardWidth = productCards[0].offsetWidth;
           const cardMarginLeft = parseFloat(cardStyle.marginLeft);
           const cardMarginRight = parseFloat(cardStyle.marginRight);
-          const totalCardWidth = cardWidth + cardMarginLeft + cardMarginRight;
+          const totalCardWidth = cardWidth + cardMarginLeft + cardMarginRight; // Largura total com as margens
 
+          // Calcula o offset para centralizar o card atual
+          // Pega a largura visível do container do carrossel (product-carousel-wrapper)
           const wrapperWidth = carouselTrack.parentElement.offsetWidth;
           let offset = -(currentIndex * totalCardWidth) + (wrapperWidth / 2) - (totalCardWidth / 2);
 
+          // Limita o offset para não ir além dos limites do carrossel
           const maxOffset = -(totalCards * totalCardWidth - wrapperWidth);
           if (maxOffset > 0) offset = 0;
           else if (offset < maxOffset) offset = maxOffset;
           if (offset > 0) offset = 0;
 
-          carouselTrack.style.transition = 'transform 0.3s ease-in-out'; 
+          carouselTrack.style.transition = 'transform 0.3s ease-in-out'; // Velocidade da transição aumentada
           carouselTrack.style.transform = `translateX(${offset}px)`;
 
           if (prevButton) prevButton.style.display = 'flex';
@@ -575,6 +583,7 @@ class CardComponent extends HTMLElement {
           });
         }
 
+        // Atualiza o carrossel ao redimensionar a janela
         window.addEventListener('resize', () => {
           calculateCardsInView();
           createIndicators();
@@ -582,6 +591,7 @@ class CardComponent extends HTMLElement {
           updateIndicators();
         });
 
+        // Inicializa o carrossel
         calculateCardsInView();
         createIndicators();
         scrollToCurrent();
